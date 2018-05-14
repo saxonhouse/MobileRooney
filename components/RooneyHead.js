@@ -11,10 +11,11 @@ export class RooneyHead extends Component {
   }
 
   render() {
+    const size = this.props.size;
     return (
-      <view>
+      <View>
       <Image source={{uri: "http://cdn.staticneo.com/w/footballmanager/9/90/5108390.png"}}
-      style = {{height: {this.props.size}, transition: 'height 0.1s ease-out'}}
+      style = {{height: {size}, transition: 'height 0.1s ease-out'}}
       alt = 'Wayne Rooney' />
       </View>
     )

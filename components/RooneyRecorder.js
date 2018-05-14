@@ -7,7 +7,7 @@ export class RooneyRecorder extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filepath = '',
+      filepath: '',
       score: 0,
     }
     this.finished = this.finished.bind(this);
@@ -16,7 +16,9 @@ export class RooneyRecorder extends Component {
   finished(filepath, volume, time) {
     this.setState({filepath: filepath, score: volume * time});
     console.log(this.state.filepath, this.state.score);
-    this.props.navigation.navigate('RooneyRating', {this.state.filepath, this.state.score});
+    this.props.navigation.navigate('RooneyRating', {
+      filepath: this.state.file,
+      score: this.state.score});
   }
 
   render() {

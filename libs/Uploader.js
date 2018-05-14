@@ -3,13 +3,13 @@ const options = require('./options.js');
 
 const Uploader = {
   upload(file, filename, data) {
-    const file = {
+    const s3File = {
   uri: file,
   name: filename,
   type: 'audio/aac'
   }
 
-  RNS3.put(file, options).then(response => {
+  RNS3.put(s3File, options).then(response => {
     if (response.status !== 201)
       throw new Error("Failed to upload to S3");
     console.log(response.body);
@@ -23,10 +23,10 @@ const Uploader = {
       body: JSON.stringify(data),
     }).then((response) => {
       return response;
-    }).catch(error) {
+    }).catch((error) => {
       throw error;
-    };
-  }
+    });
+  });
 
 }
 

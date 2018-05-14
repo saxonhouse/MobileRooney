@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-import { View, Button, Text } from 'react-native';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
 import { RooneyHead } from './RooneyHead';
 let audioPath = AudioUtils.DocumentDirectoryPath + '/test.aac';
+
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TouchableHighlight,
+  Platform,
+  PermissionsAndroid,
+} from 'react-native';
 
 export class Mic extends Component {
   constructor(props) {
@@ -13,7 +23,7 @@ export class Mic extends Component {
       volume: 0,
       volumeAverage: 0,
       currentTime: 0,
-      hasPermission: false,
+      hasPermission: undefined,
       finished: '',
       error: ''
     }
@@ -43,8 +53,8 @@ export class Mic extends Component {
           if (Platform.OS === 'ios') {
             this._finishRecording(data.status === "OK", data.audioFileURL);
           }
-        }
-    }
+        };
+    });
   }
 
   _checkPermission() {
@@ -130,7 +140,7 @@ export class Mic extends Component {
         <RooneyHead size={150 + 200*(this.state.volume)} />
         <Button title={this.state.recording ? 'Stop' : 'Record'}
         onPress={this.state.recording ? this._record() : this._stop()} />
-        <Text> {this.state.currentTime} <Text>
+        <Text> {this.state.currentTime} </Text>
         <Text> {this.state.volume} </Text>
         <Text> {this.state.error} </Text>
       </View>
