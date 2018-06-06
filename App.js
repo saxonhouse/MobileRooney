@@ -1,20 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import { RooneyRecorder } from './components/RooneyRecorder';
-import { RooneyRating } from './components/RooneyRating';
-import { RooneyBoard } from './components/RooneyBoard';
+import { RooneyRecorderScreen } from './components/RooneyRecorder';
+import { RooneyRatingScreen } from './components/RooneyRating';
+import { RooneyBoardScreen } from './components/RooneyBoard';
 
 const RootStack = StackNavigator({
   RooneyRecorder: {
-    screen: RooneyRecorder,
+    screen: RooneyRecorderScreen,
     },
   RooneyRating: {
-    screen: RooneyRating,
+    screen: RooneyRatingScreen,
     },
   RooneyBoard: {
-    screen: RooneyBoard,
-    }
+    screen: RooneyBoardScreen,
+    },
   },
   {
     initialRouteName: 'RooneyRecorder',

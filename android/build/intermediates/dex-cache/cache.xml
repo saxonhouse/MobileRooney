@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\react\rooney\MobileRooney\android\app\build\intermediates\exploded-aar\MobileRooney\react-native-sound\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2d1c34c1cab3be4e7fbfa2a8e4dcabcf941f22a0">
+        <dex dex="C:\react\rooney\MobileRooney\android\app\build\intermediates\pre-dexed\debug\MobileRooney-react-native-sound-unspecified_ad50ae4471432e0a1a76af6eef91b6f517668f66.jar" />
+    </item>
+
+</items>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Button } from 'react-native';
 
-class RooneyForm extends Component {
+export class RooneyForm extends Component {
   constructor(props) {
     super(props);
     this.state = { player: '' };
@@ -24,9 +24,8 @@ class RooneyForm extends Component {
           value={ this.state.player }
           onSubmitEditing = { this.handleSubmit }
          />
+         <Button onPress = { this.handleSubmit } title="Submit" />
       </View>
     )
   }
 }
-
-export default RooneyForm;

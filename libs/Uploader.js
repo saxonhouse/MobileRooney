@@ -1,5 +1,6 @@
 import { RNS3 } from 'react-native-aws3';
 const options = require('./options.js');
+var apiroot = require('./options.js');
 
 const Uploader = {
   upload(file, filename, data) {
@@ -14,7 +15,7 @@ const Uploader = {
       throw new Error("Failed to upload to S3");
     console.log(response.body);
     data.audio = response.body.postResponse.location;
-    fetch('https://mywebsite.com/endpoint/', {
+    fetch(apiroot, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -22,8 +23,10 @@ const Uploader = {
       },
       body: JSON.stringify(data),
     }).then((response) => {
+      console.warn(response);
       return response;
     }).catch((error) => {
+      console.warn(error);
       throw error;
     });
   });

@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Animated } from 'react-native';
 
-const rooneyStyle = {
-  transition: 'height 0.1s ease-out'
-}
 
 export class RooneyHead extends Component {
   constructor(props) {
     super(props);
+    this.animate = this.animate.bind(this);
+    this.rooneyAnim = new Animated.Value(1);
+  }
+
+  componentDidMount () {
+  this.animate();
+  }
+
+  animate() {
+    Animated.spring(
+      this.rooneyAnim,
+      {
+        toValue: this.props.scale,
+      }
+    ).start();
   }
 
   render() {
-    const size = this.props.size;
     return (
       <View>
-      <Image source={{uri: "http://cdn.staticneo.com/w/footballmanager/9/90/5108390.png"}}
-      style = {{height: {size}, transition: 'height 0.1s ease-out'}}
+      <Animated.Image source={{uri: "http://cdn.staticneo.com/w/footballmanager/9/90/5108390.png"}}
+      style={{
+        height: 200,
+        transform: [{
+          scale: this.rooneyAnim,
+        }],
+      }}
+      resizeMode = 'contain'
       alt = 'Wayne Rooney' />
       </View>
     )

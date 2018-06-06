@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
 import { RooneyHead } from './RooneyHead';
-let audioPath = AudioUtils.DocumentDirectoryPath + '/test.aac';
+var uuid = require('react-native-uuid');
+let audioPath = AudioUtils.DocumentDirectoryPath + '/' + uuid.v1() +'.aac';
 
 import {
   AppRegistry,
@@ -10,6 +11,7 @@ import {
   View,
   Button,
   TouchableHighlight,
+  TouchableWithoutFeedback,
   Platform,
   PermissionsAndroid,
 } from 'react-native';
@@ -25,7 +27,10 @@ export class Mic extends Component {
       currentTime: 0,
       hasPermission: undefined,
       finished: '',
-      error: ''
+      error: '',
+      scale: 1,
+      audioPath: audioPath,
+      stoppedRecording: undefined
     }
   }
 
@@ -35,17 +40,24 @@ export class Mic extends Component {
 
       if (!hasPermission) return;
 
-      AudioRecorder.prepareRecordingAtPath(audioPath, {
+      AudioRecorder.prepareRecordingAtPath(this.state.audioPath, {
         SampleRate: 22050,
         Channels: 1,
         AudioQuality: "Low",
         AudioEncoding: "aac",
-        MeteringEnabled: true
+        MeteringEnabled: true,
       });
 
       AudioRecorder.onProgress = (data) => {
           this.setState({currentTime: Math.floor(data.currentTime)});
-          this.setState({volume: Math.floor(data.currentMetering)});
+          if (Platform.OS !== 'android') {
+            meter = Math.floor(data.currentMetering)
+            this.setState({
+              volume: meter,
+              scale: meter
+            });
+          }
+
         };
 
       AudioRecorder.onFinished = (data) => {
@@ -74,9 +86,23 @@ export class Mic extends Component {
         });
     }
 
+    _renderButton(title, onPressIn, onPressOut) {
+
+      return (
+        <TouchableWithoutFeedback onPressIn={onPressIn} onPressOut={onPressOut}>
+          <View>
+          <Text>
+            {title}
+          </Text>
+          </View>
+        </TouchableWithoutFeedback>
+      );
+    }
+
     async _record() {
+
       if (this.state.recording) {
-        console.warn('Already recording!');
+        this._stop();
         return;
       }
 
@@ -97,13 +123,13 @@ export class Mic extends Component {
         console.error(error);
         this.setState({error: error});
       }
-
       var c = 0;
       var vt = 0;
+      var scaleString = ''
       this._record.interval = setInterval(() => {
         c += 1
         vt += this.state.volume;
-        this.setState({ volumeAverage: vt/c })
+        this.setState({ volumeAverage: vt/c });
       }, 200);
     }
 
@@ -120,7 +146,7 @@ export class Mic extends Component {
         const filePath = await AudioRecorder.stopRecording();
 
         if (Platform.OS === 'android') {
-          this._finishRecording(true, filePath);
+          filePath = this._finishRecording(true, filePath);
         }
         this.props.finished(filePath, this.state.volumeAverage, this.state.currentTime);
       } catch (error) {
@@ -131,15 +157,16 @@ export class Mic extends Component {
 
     _finishRecording(didSucceed, filePath) {
       this.setState({ finished: didSucceed });
-      console.log(`Finished recording of duration ${this.state.currentTime} seconds at path: ${filePath}`);
+      console.warn(`Finished recording of duration ${this.state.currentTime} seconds at path: ${filePath}`);
+      return filePath
     }
 
     render() {
     return (
       <View>
-        <RooneyHead size={150 + 200*(this.state.volume)} />
-        <Button title={this.state.recording ? 'Stop' : 'Record'}
-        onPress={this.state.recording ? this._record() : this._stop()} />
+        <RooneyHead scale={this.state.scale} />
+        {this._renderButton("RECORD", () => {this._record()} )}
+        {this._renderButton("STOP", () => {this._stop()} )}
         <Text> {this.state.currentTime} </Text>
         <Text> {this.state.volume} </Text>
         <Text> {this.state.error} </Text>

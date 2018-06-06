@@ -9,12 +9,13 @@ export default class Player extends Component {
     super(props);
     this.state = {
       error: ''
-    }
+    };
     this.playRooney = this.playRooney.bind(this);
   }
 
   playRooney = (url) => {
     const Rooney = new Sound(url, null, (error) => {
+      console.warn(url);
       if (error) {
         console.log('failed to load the sound', error);
         return;
@@ -26,9 +27,10 @@ export default class Player extends Component {
   }
 
   render() {
+    const url = this.props.url;
     return (
       <View>
-        <Button title="play me" onPress={this.playRooney(this.props.url)} />
+        <Button onPress={() => this.playRooney(this.props.url)} title={"play me"} />
         <Text> {this.state.error} </Text>
       </View>
     )
