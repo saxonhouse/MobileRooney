@@ -4,7 +4,7 @@ import { View, Text, Button } from 'react-native';
 var Sound = require('react-native-sound');
 Sound.setCategory('Playback');
 
-export default class Player extends Component {
+export class Player extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +27,6 @@ export default class Player extends Component {
   }
 
   render() {
-    const url = this.props.url;
     return (
       <View>
         <Button onPress={() => this.playRooney(this.props.url)} title={"play me"} />

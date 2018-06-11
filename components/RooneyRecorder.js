@@ -11,6 +11,7 @@ export class RooneyRecorderScreen extends Component {
       score: 0,
     }
     this.finished = this.finished.bind(this);
+    this.loadBoard = this.loadBoard.bind(this);
   }
 
   finished(filepath, volume, time) {
@@ -21,11 +22,17 @@ export class RooneyRecorderScreen extends Component {
       score: this.state.score});
   }
 
+  loadBoard() {
+    this.props.navigation.navigate('RooneyBoard');
+  }
+
   render() {
     return (
       <View>
         <Mic finished={this.finished} />
+        <Button onPress={this.loadBoard} title={"RooneyBoard"} />
       </View>
+
     )
   }
 }

@@ -103,14 +103,19 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        
+        ndk {
+        abiFilters "armeabi-v7a", "x86", "armeabi", "arm64-v8a"
+    }
+    packagingOptions {
+        exclude "lib/arm64-v8a/libgnustl_shared.so"
+    }
     }
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86"
+            include "armeabi-v7a", "x86", 'armeabi', 'arm64-v8a'
         }
     }
     buildTypes {
@@ -137,6 +142,7 @@ android {
 dependencies {
     compile project(':react-native-sound')
     compile project(':react-native-audio')
+    compile project(':react-native-fetch-blob')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules

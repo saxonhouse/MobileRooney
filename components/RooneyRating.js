@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Player from './Player';
+import { Player } from './Player';
 import { View, Text, Button } from 'react-native';
 import { RooneyForm } from './RooneyForm';
 import { StackNavigator } from 'react-navigation';

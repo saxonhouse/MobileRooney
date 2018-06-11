@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$/.." />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/../../node_modules/react-native-audio/android" />
+            <option value="$PROJECT_DIR$/../../node_modules/react-native-fetch-blob/android" />
             <option value="$PROJECT_DIR$/../../node_modules/react-native-sound/android" />
           </set>
         </option>

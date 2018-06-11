@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import Player from './Player';
+import { View, Text } from 'react-native';
+import { Player } from './Player';
 
 
 export class Rooney extends Component {

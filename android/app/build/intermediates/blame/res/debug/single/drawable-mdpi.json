@@ -152,12 +152,12 @@
         "source": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-mdpi\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_btn_rating_star_off_mtrl_alpha.png",
         "source": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-mdpi\\abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "C:\\react\\rooney\\MobileRooney\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_scrubber_primary_mtrl_alpha.9.png",
