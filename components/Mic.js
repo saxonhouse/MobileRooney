@@ -54,7 +54,7 @@ export class Mic extends Component {
             meter = Math.floor(data.currentMetering)
             this.setState({
               volume: meter,
-              scale: meter
+              scale: (meter+35)/10
             });
           }
 
@@ -168,7 +168,7 @@ export class Mic extends Component {
         {this._renderButton("RECORD", () => {this._record()} )}
         {this._renderButton("STOP", () => {this._stop()} )}
         <Text> {this.state.currentTime} </Text>
-        <Text> {this.state.volume} </Text>
+        <Text> {this.state.scale} </Text>
         <Text> {this.state.error} </Text>
       </View>
     )

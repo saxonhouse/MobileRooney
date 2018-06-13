@@ -13,8 +13,8 @@ export class Player extends Component {
     this.playRooney = this.playRooney.bind(this);
   }
 
-  playRooney = (url) => {
-    const Rooney = new Sound(url, null, (error) => {
+  playRooney() {
+    const Rooney = new Sound(this.props.url, null, (error) => {
       console.warn(url);
       if (error) {
         console.log('failed to load the sound', error);
@@ -29,7 +29,7 @@ export class Player extends Component {
   render() {
     return (
       <View>
-        <Button onPress={() => this.playRooney(this.props.url)} title={"play me"} />
+        <Button onPress={this.playRooney} title={"play me"} />
         <Text> {this.state.error} </Text>
       </View>
     )
