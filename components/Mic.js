@@ -141,14 +141,13 @@ export class Mic extends Component {
 
       clearInterval(this._record.interval);
       this.setState({stoppedRecording: true, recording: false, paused: false});
-
       try {
         const filePath = await AudioRecorder.stopRecording();
 
         if (Platform.OS === 'android') {
-          filePath = this._finishRecording(true, filePath);
+          this._finishRecording(true, filePath);
         }
-        this.props.finished(filePath, this.state.volumeAverage, this.state.currentTime);
+
       } catch (error) {
         console.error(error);
         this.setState({error: error});
@@ -158,7 +157,7 @@ export class Mic extends Component {
     _finishRecording(didSucceed, filePath) {
       this.setState({ finished: didSucceed });
       console.warn(`Finished recording of duration ${this.state.currentTime} seconds at path: ${filePath}`);
-      return filePath
+      this.props.finished(filePath, this.state.volumeAverage, this.state.currentTime);
     }
 
     render() {

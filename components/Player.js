@@ -15,7 +15,6 @@ export class Player extends Component {
 
   playRooney() {
     const Rooney = new Sound(this.props.url, null, (error) => {
-      console.warn(url);
       if (error) {
         console.log('failed to load the sound', error);
         return;
@@ -30,7 +29,7 @@ export class Player extends Component {
     return (
       <View>
         <Button onPress={this.playRooney} title={"play me"} />
-        <Text> {this.state.error} </Text>
+        <Text> {this.props.url} {this.state.error} </Text>
       </View>
     )
   }

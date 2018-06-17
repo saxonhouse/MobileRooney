@@ -3,7 +3,8 @@ import { View, Text } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Player}  from './Player';
 import { Rooney } from './Rooney';
-var apiroot = require('../libs/options.js');
+const options = require('../libs/options.js');
+var apiroot = options.apiroot;
 let testdata = [
   {
     _id: 'example1',
@@ -30,13 +31,13 @@ export class RooneyBoardScreen extends Component {
     super(props);
     this.state = {
       filter : 'all',
-      data : testdata,
+      data : [],
       myRooney: {}
     }
   }
 
   getMyRooney = () => {
-    let url = apiroot + '/?_id=' + this.props.navigation.state._id;
+    let url = this.props.navigation.state.url;
     fetch(url, {
       method: 'GET',
       headers: {
@@ -44,7 +45,8 @@ export class RooneyBoardScreen extends Component {
         'Content-Type': 'application/json',
         }
       }).then((response) => {
-
+        console.warn(response)
+        this.setState({myRooney: response})
       }).catch((error) => {
         console.warn(error);
       });
@@ -60,7 +62,6 @@ export class RooneyBoardScreen extends Component {
         }
       }).then((response) => {
         this.setState({data: response.body.items});
-        console.warn(response);
       }).catch((error) => {
         console.warn(error);
     });
@@ -68,10 +69,9 @@ export class RooneyBoardScreen extends Component {
 
 
   componentDidMount() {
-    if (this.props.navigation.state._id) {
+    if (this.props.navigation.state.url) {
       this.getMyRooney();
     }
-    console.warn('fetching rooneys');
     this.getRooneys();
   }
 
@@ -80,20 +80,18 @@ export class RooneyBoardScreen extends Component {
     let leadingRooneys = this.state.data.map(
       rooney => {
         return(
-          <Rooney player={rooney.player} key={rooney._id}>
-            <Player url={rooney.audio} />
-            <Text> {rooney.score} </Text>
-          </Rooney>
+          <View>
+          <Rooney player={rooney.player} audio={rooney.audio} key={rooney._id} />
+          <Text> {rooney.score} </Text>
+          </View>
         )
       }
     );
 
     return(
       <View>
-        <Rooney player={myRooney.player}>
-          <Player url={myRooney.audio} />
-          <Text> {myRooney.score} </Text>
-        </Rooney>
+        <Rooney player={myRooney.player} audio={myRooney.audio} />
+        <Text> {myRooney.score} </Text>
         { leadingRooneys }
       </View>
     )

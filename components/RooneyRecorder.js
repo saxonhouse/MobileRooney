@@ -16,7 +16,6 @@ export class RooneyRecorderScreen extends Component {
 
   finished(filepath, volume, time) {
     this.setState({filepath: filepath, score: volume * time});
-    console.warn(this.state.filepath, this.state.score);
     this.props.navigation.navigate('RooneyRating', {
       filepath: this.state.filepath,
       score: this.state.score});
