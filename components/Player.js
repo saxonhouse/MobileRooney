@@ -29,7 +29,7 @@ export class Player extends Component {
     return (
       <View>
         <Button onPress={this.playRooney} title={"play me"} />
-        <Text> {this.props.url} {this.state.error} </Text>
+        <Text> {this.state.error} </Text>
       </View>
     )
   }

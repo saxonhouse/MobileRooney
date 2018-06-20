@@ -18,8 +18,7 @@ export class RooneyRatingScreen extends Component {
       score: this.props.navigation.state.score,
     }
     Uploader.upload(this.props.navigation.state.file, filename, data).then((response) => {
-      console.warn(response.headers.map.location[0]);
-      this.props.navigation.navigate('RooneyBoard', {url: response.headers.map.location[0]});
+      this.props.navigation.navigate('RooneyBoard', {id: response._id});
     }).catch((e) => {
       this.setState({error: e.message});
       return

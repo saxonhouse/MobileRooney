@@ -26,7 +26,8 @@ const Uploader = {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      }).then((response) => {
+      }).then((response) => response.json())
+        .then((response) => {
         resolve(response);
       }).catch((error) => {
         reject(error);

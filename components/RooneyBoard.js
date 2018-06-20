@@ -37,16 +37,16 @@ export class RooneyBoardScreen extends Component {
   }
 
   getMyRooney = () => {
-    let url = this.props.navigation.state.url;
+    let url = apiroot + this.props.navigation.state.params.id;
     fetch(url, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         }
-      }).then((response) => {
-        console.warn(response)
-        this.setState({myRooney: response})
+      }).then((response) => response.json())
+        .then((responseJson) => {
+        this.setState({myRooney: responseJson})
       }).catch((error) => {
         console.warn(error);
       });
@@ -60,8 +60,9 @@ export class RooneyBoardScreen extends Component {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         }
-      }).then((response) => {
-        this.setState({data: response.body.items});
+      }).then((response) => response.json())
+        .then((responseJson) => {
+        this.setState({data: responseJson._items});
       }).catch((error) => {
         console.warn(error);
     });
@@ -69,7 +70,7 @@ export class RooneyBoardScreen extends Component {
 
 
   componentDidMount() {
-    if (this.props.navigation.state.url) {
+    if (this.props.navigation.state.params.id) {
       this.getMyRooney();
     }
     this.getRooneys();
@@ -80,8 +81,8 @@ export class RooneyBoardScreen extends Component {
     let leadingRooneys = this.state.data.map(
       rooney => {
         return(
-          <View>
-          <Rooney player={rooney.player} audio={rooney.audio} key={rooney._id} />
+          <View key={rooney._id} >
+          <Rooney player={rooney.player} audio={rooney.audio} />
           <Text> {rooney.score} </Text>
           </View>
         )
