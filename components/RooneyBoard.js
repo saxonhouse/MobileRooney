@@ -34,6 +34,7 @@ export class RooneyBoardScreen extends Component {
       data : [],
       myRooney: {}
     }
+    this.renderRooney = this.renderRooney.bind(this);
   }
 
   getMyRooney = () => {
@@ -70,20 +71,30 @@ export class RooneyBoardScreen extends Component {
 
 
   componentDidMount() {
-    if (this.props.navigation.state.params.id) {
+    if (this.props.navigation.state.params.getRooney) {
       this.getMyRooney();
     }
     this.getRooneys();
   }
 
+  renderRooney() {
+    if (this.props.navigation.state.params.getRooney) {
+      let myRooney = this.state.myRooney;
+      return (
+        <View>
+          <Text> Your Rooney </Text>
+          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score}/>
+        </View>
+      );
+    }
+  }
+
   render() {
-    let myRooney = this.state.myRooney;
     let leadingRooneys = this.state.data.map(
       rooney => {
         return(
           <View key={rooney._id} >
-          <Rooney player={rooney.player} audio={rooney.audio} />
-          <Text> {rooney.score} </Text>
+          <Rooney player={rooney.player} audio={rooney.audio} score={rooney.score} />
           </View>
         )
       }
@@ -91,8 +102,9 @@ export class RooneyBoardScreen extends Component {
 
     return(
       <View>
-        <Rooney player={myRooney.player} audio={myRooney.audio} />
-        <Text> {myRooney.score} </Text>
+        <Text> The Rooney Board </Text>
+        {this.renderRooney()}
+        <Text> All Time Best Rooneys </Text>
         { leadingRooneys }
       </View>
     )

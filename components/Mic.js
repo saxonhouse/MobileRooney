@@ -81,7 +81,6 @@ export class Mic extends Component {
 
       return PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.RECORD_AUDIO, rationale)
         .then((result) => {
-          console.log('Permission result:', result);
           return (result === true || result === PermissionsAndroid.RESULTS.GRANTED);
         });
     }
@@ -107,7 +106,7 @@ export class Mic extends Component {
       }
 
       if (!this.state.hasPermission) {
-        console.warn('Can\'t record, no permission granted!');
+        this.setState({error: 'Can\'t record, no permission granted!'});
         return;
       }
 
@@ -120,8 +119,7 @@ export class Mic extends Component {
       try {
         const filePath = await AudioRecorder.startRecording();
       } catch (error) {
-        console.error(error);
-        this.setState({error: error});
+        this.setState({error: error.message});
       }
       var c = 0;
       var vt = 0;
@@ -135,7 +133,6 @@ export class Mic extends Component {
 
     async _stop() {
       if (!this.state.recording) {
-        console.warn('Can\'t stop, not recording!');
         return;
       }
 
@@ -149,14 +146,12 @@ export class Mic extends Component {
         }
 
       } catch (error) {
-        console.error(error);
-        this.setState({error: error});
+        this.setState({error: error.message});
       }
     }
 
     _finishRecording(didSucceed, filePath) {
       this.setState({ finished: didSucceed });
-      console.warn(`Finished recording of duration ${this.state.currentTime} seconds at path: ${filePath}`);
       this.props.finished(filePath, this.state.volumeAverage, this.state.currentTime);
     }
 
@@ -164,8 +159,7 @@ export class Mic extends Component {
     return (
       <View>
         <RooneyHead scale={this.state.scale} />
-        {this._renderButton("RECORD", () => {this._record()} )}
-        {this._renderButton("STOP", () => {this._stop()} )}
+        {this._renderButton("RECORD", () => {this._record()}, () => {this._stop()} )}
         <Text> {this.state.currentTime} </Text>
         <Text> {this.state.scale} </Text>
         <Text> {this.state.error} </Text>

@@ -9,6 +9,7 @@ export class RooneyRatingScreen extends Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
+    this.discard = this.discard.bind(this);
   }
 
   submit(player) {
@@ -18,13 +19,16 @@ export class RooneyRatingScreen extends Component {
       score: this.props.navigation.state.score,
     }
     Uploader.upload(this.props.navigation.state.file, filename, data).then((response) => {
-      this.props.navigation.navigate('RooneyBoard', {id: response._id});
+      this.props.navigation.navigate('RooneyBoard', {getRooney: true, id: response._id});
     }).catch((e) => {
       this.setState({error: e.message});
       return
     });
 
+  }
 
+  discard() {
+    this.props.navigation.navigate('RooneyRecorder');
   }
 
   render() {
@@ -36,6 +40,7 @@ export class RooneyRatingScreen extends Component {
         <Player url={params.filepath} />
         <Text> Enter your initials to submit your Rooney to the Rooneyboard</Text>
         <RooneyForm onRooneySubmit={this.submit} />
+        <Button onPress={this.discard} title={"Discard"} />
       </View>
     )
   }

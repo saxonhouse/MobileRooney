@@ -22,7 +22,7 @@ export class RooneyRecorderScreen extends Component {
   }
 
   loadBoard() {
-    this.props.navigation.navigate('RooneyBoard');
+    this.props.navigation.navigate('RooneyBoard', {getRooney: false});
   }
 
   render() {
