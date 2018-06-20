@@ -16,7 +16,7 @@ export class RooneyRatingScreen extends Component {
     let filename = player + Date.now() + '.aac';
     let data = {
       player: player,
-      score: this.props.navigation.state.score,
+      score: this.props.navigation.state.params.score,
     }
     Uploader.upload(this.props.navigation.state.file, filename, data).then((response) => {
       this.props.navigation.navigate('RooneyBoard', {getRooney: true, id: response._id});
@@ -33,10 +33,9 @@ export class RooneyRatingScreen extends Component {
 
   render() {
     const { params } = this.props.navigation.state;
-    const score = params ? params.score : 0;
     return (
       <View>
-        <Text>  your Rooney score is {score} </Text>
+        <Text>  your Rooney score is {params.score} </Text>
         <Player url={params.filepath} />
         <Text> Enter your initials to submit your Rooney to the Rooneyboard</Text>
         <RooneyForm onRooneySubmit={this.submit} />
