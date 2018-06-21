@@ -3,6 +3,7 @@ package com.mobilerooney;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.fullstack.oauth.OAuthManagerPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.rnim.rn.audio.ReactNativeAudioPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new OAuthManagerPackage(),
             new RNFetchBlobPackage(),
             new RNSoundPackage(),
             new ReactNativeAudioPackage()

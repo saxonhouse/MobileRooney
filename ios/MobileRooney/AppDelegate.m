@@ -20,6 +20,8 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
+  // ADD THIS LINE SOMEWHERE IN THIS FUNCTION
+  [OAuthManager setupOAuthHandler:application];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"MobileRooney"
                                                initialProperties:nil
@@ -32,6 +34,18 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
+}
+
+// Add the import at the top:
+#import "OAuthManager.h"
+// ...
+@implementation AppDelegate
+// ...
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  return [OAuthManager handleOpenUrl:application
+                             openURL:url
+                   sourceApplication:sourceApplication
+                          annotation:annotation];
 }
 
 @end

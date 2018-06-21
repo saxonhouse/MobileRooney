@@ -23,6 +23,7 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		1EAAF1A0E9514332B7C78E8E /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CACF91B2D5FE4B9C81A94ACD /* libRNFetchBlob.a */; settings = {ATTRIBUTES = (Weak, ); }; };
+		20D942574D78425A8B8710FC /* libOAuthManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA688A55F1AC49AC97E81437 /* libOAuthManager.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -38,6 +39,7 @@
 		423B150A20CEE60300316ADB /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		58581B25AC6C497298C0D689 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AA650EE81A4709A5788939 /* libRNSound.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9AD40E97B624EC5ED88BBD01 /* Pods_MobileRooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90E928158F9C5170A874E43 /* Pods_MobileRooney.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		F374C199E2ED4A5AB8560033 /* libRNAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F96F47313D84D03829E6656 /* libRNAudio.a */; };
 /* End PBXBuildFile section */
@@ -302,6 +304,13 @@
 			remoteGlobalIDString = 19825A1E1BD4A89800EE0337;
 			remoteInfo = RNSound;
 		};
+		42EB76B020DBEB39005E1696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC4153ACDC84A2EA923DEFC /* OAuthManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D91353961DA7849100AABC96;
+			remoteInfo = OAuthManager;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -362,16 +371,22 @@
 		2D02E47B1E0B4A5D006451C7 /* MobileRooney-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobileRooney-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MobileRooney-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MobileRooney-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EB76D620DC021A005E1696 /* MobileRooney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MobileRooney.entitlements; path = MobileRooney/MobileRooney.entitlements; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		653B389B70C44B6299F9FDA3 /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		86AA650EE81A4709A5788939 /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
 		8F96F47313D84D03829E6656 /* libRNAudio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAudio.a; sourceTree = "<group>"; };
+		AA688A55F1AC49AC97E81437 /* libOAuthManager.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libOAuthManager.a; sourceTree = "<group>"; };
+		ABC4153ACDC84A2EA923DEFC /* OAuthManager.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = OAuthManager.xcodeproj; path = "../node_modules/react-native-oauth/ios/OAuthManager.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B492FC3CDD18B7668DD982B6 /* Pods-MobileRooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileRooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileRooney/Pods-MobileRooney.release.xcconfig"; sourceTree = "<group>"; };
 		BE9264DC9B944854B10E36C3 /* RNAudio.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAudio.xcodeproj; path = "../node_modules/react-native-audio/ios/RNAudio.xcodeproj"; sourceTree = "<group>"; };
+		C90E928158F9C5170A874E43 /* Pods_MobileRooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileRooney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACF91B2D5FE4B9C81A94ACD /* libRNFetchBlob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFetchBlob.a; sourceTree = "<group>"; };
 		EBDBD537535C403ABF6EAB17 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFetchBlob.xcodeproj; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; };
+		EFE0437F509AECA557107A11 /* Pods-MobileRooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileRooney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileRooney/Pods-MobileRooney.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +417,8 @@
 				F374C199E2ED4A5AB8560033 /* libRNAudio.a in Frameworks */,
 				58581B25AC6C497298C0D689 /* libRNSound.a in Frameworks */,
 				1EAAF1A0E9514332B7C78E8E /* libRNFetchBlob.a in Frameworks */,
+				20D942574D78425A8B8710FC /* libOAuthManager.a in Frameworks */,
+				9AD40E97B624EC5ED88BBD01 /* Pods_MobileRooney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +529,7 @@
 		13B07FAE1A68108700A75B9A /* MobileRooney */ = {
 			isa = PBXGroup;
 			children = (
+				42EB76D620DC021A005E1696 /* MobileRooney.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -550,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				C90E928158F9C5170A874E43 /* Pods_MobileRooney.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -560,6 +579,7 @@
 				8F96F47313D84D03829E6656 /* libRNAudio.a */,
 				86AA650EE81A4709A5788939 /* libRNSound.a */,
 				CACF91B2D5FE4B9C81A94ACD /* libRNFetchBlob.a */,
+				AA688A55F1AC49AC97E81437 /* libOAuthManager.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -584,6 +604,14 @@
 			isa = PBXGroup;
 			children = (
 				423B154E20CEE73D00316ADB /* libRNSound.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42EB76AD20DBEB39005E1696 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42EB76B120DBEB39005E1696 /* libOAuthManager.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -624,6 +652,7 @@
 				BE9264DC9B944854B10E36C3 /* RNAudio.xcodeproj */,
 				653B389B70C44B6299F9FDA3 /* RNSound.xcodeproj */,
 				EBDBD537535C403ABF6EAB17 /* RNFetchBlob.xcodeproj */,
+				ABC4153ACDC84A2EA923DEFC /* OAuthManager.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -646,6 +675,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				423B150920CEE52900316ADB /* Recovered References */,
+				CFA74CA72D9695979AF234C1 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -670,6 +700,15 @@
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CFA74CA72D9695979AF234C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0437F509AECA557107A11 /* Pods-MobileRooney.debug.xcconfig */,
+				B492FC3CDD18B7668DD982B6 /* Pods-MobileRooney.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,10 +736,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MobileRooney" */;
 			buildPhases = (
+				05B46C5A910344BF666AD4C0 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				0F0CE406E1C9F13DFF4E7BF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -753,7 +794,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 930;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -764,6 +805,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 79Q73J4D6B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -788,6 +834,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 42EB76AD20DBEB39005E1696 /* Products */;
+					ProjectRef = ABC4153ACDC84A2EA923DEFC /* OAuthManager.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1105,6 +1155,13 @@
 			remoteRef = 423B154D20CEE73D00316ADB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		42EB76B120DBEB39005E1696 /* libOAuthManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuthManager.a;
+			remoteRef = 42EB76B020DBEB39005E1696 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1190,6 +1247,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		05B46C5A910344BF666AD4C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileRooney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F0CE406E1C9F13DFF4E7BF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MobileRooney/Pods-MobileRooney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DCTAuth/DCTAuth.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DCTAuth.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobileRooney/Pods-MobileRooney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1284,12 +1377,14 @@
 					"$(SRCROOT)..\node_modules\neact-native-audioios",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
 					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
 				);
 				INFOPLIST_FILE = MobileRooneyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1315,12 +1410,14 @@
 					"$(SRCROOT)..\node_modules\neact-native-audioios",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
 					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
 				);
 				INFOPLIST_FILE = MobileRooneyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1337,8 +1434,10 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE0437F509AECA557107A11 /* Pods-MobileRooney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MobileRooney/MobileRooney.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1346,9 +1445,17 @@
 				DEVELOPMENT_TEAM = 79Q73J4D6B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)..\node_modules\neact-native-audioios",
-					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
-					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-audioios",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-soundRNSound",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/LinkingIOS",
 				);
 				INFOPLIST_FILE = MobileRooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1366,17 +1473,27 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B492FC3CDD18B7668DD982B6 /* Pods-MobileRooney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MobileRooney/MobileRooney.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79Q73J4D6B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)..\node_modules\neact-native-audioios",
-					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
-					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-audioios",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-soundRNSound",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/LinkingIOS",
 				);
 				INFOPLIST_FILE = MobileRooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1409,11 +1526,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-audioios",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
 					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
 				);
 				INFOPLIST_FILE = "MobileRooney-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1447,11 +1566,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-audioios",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
 					"$(SRCROOT)..\node_modules\neact-native-fetch-blobios/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
 				);
 				INFOPLIST_FILE = "MobileRooney-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1486,6 +1607,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.MobileRooney-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1510,6 +1632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
