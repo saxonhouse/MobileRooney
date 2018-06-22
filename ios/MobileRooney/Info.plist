@@ -27,14 +27,31 @@
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>Facebook</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb248412052585872</string>
+			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>Twitter</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ratemyrooney</string>
+			</array>
 		</dict>
-		<dict/>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Google</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.650296745714-nc8j4klrl8ghe7bp5c1r2mqae8nd8tee</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
