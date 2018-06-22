@@ -9,9 +9,9 @@ export class LoginScreen extends Component {
     this.login = this.login.bind(this)
   }
 
-  login(platform) {
+  login(platform, scopes) {
   console.warn(platform);
-  manager.authorize(platform)
+  manager.authorize(platform, scopes)
   .then(resp => console.warn(resp))
   .catch(err => console.warn(err));
   }
@@ -20,11 +20,11 @@ export class LoginScreen extends Component {
     return(
       <View>
         <Text> Login with Twitter </Text>
-        <Button onPress={() => this.login('twitter')} title={'Login'} />
+        <Button onPress={() => this.login('twitter', {scopes: 'profile'})} title={'Login'} />
         <Text> Login with Facebook </Text>
         <Button onPress={() => this.login('facebook')} title={'Login'} />
         <Text> Login with Google</Text>
-        <Button onPress={() => this.login('google')} title={'Login'} />
+        <Button onPress={() => this.login('google', {scopes: 'profile'})} title={'Login'} />
       </View>
     )
   }
