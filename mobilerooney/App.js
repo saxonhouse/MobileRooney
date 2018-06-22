@@ -4,12 +4,8 @@ import { StackNavigator } from 'react-navigation';
 import { RooneyRecorderScreen } from './components/RooneyRecorder';
 import { RooneyRatingScreen } from './components/RooneyRating';
 import { RooneyBoardScreen } from './components/RooneyBoard';
-import { LoginScreen } from './components/Login';
 
 const RootStack = StackNavigator({
-  Login: {
-    screen: LoginScreen,
-    },
   RooneyRecorder: {
     screen: RooneyRecorderScreen,
     },
@@ -21,7 +17,7 @@ const RootStack = StackNavigator({
     },
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'RooneyRecorder',
   }
 );
 
