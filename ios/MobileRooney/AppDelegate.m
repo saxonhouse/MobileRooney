@@ -11,6 +11,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "OAuthManager.h"
 
 @implementation AppDelegate
 
@@ -36,11 +37,6 @@
   return YES;
 }
 
-// Add the import at the top:
-#import "OAuthManager.h"
-// ...
-@implementation AppDelegate
-// ...
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
   return [OAuthManager handleOpenUrl:application
                              openURL:url

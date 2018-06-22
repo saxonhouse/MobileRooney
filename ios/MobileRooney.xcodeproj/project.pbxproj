@@ -1454,7 +1454,7 @@
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-fetch-blobios/**",
-					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager",
 					"$(SRCROOT)/../node_modules/react-native/Libraries/LinkingIOS",
 				);
 				INFOPLIST_FILE = MobileRooney/Info.plist;
@@ -1492,7 +1492,7 @@
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-fetch-blobios/**",
-					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager/**",
+					"$(SRCROOT)/../node_modules/react-native-oauth/ios/OAuthManager",
 					"$(SRCROOT)/../node_modules/react-native/Libraries/LinkingIOS",
 				);
 				INFOPLIST_FILE = MobileRooney/Info.plist;
