@@ -2,6 +2,7 @@ import OAuthManager from 'react-native-oauth';
 const options = require('./options.js');
 const config = options.config;
 const tokenroot = options.tokenroot;
+const tokenauth = options.tokenauth;
 
 const manager = new OAuthManager('ratemyrooney');
 manager.configure(config);
@@ -15,7 +16,7 @@ const restToken = {
       fetch(tokenroot, {
         method: 'POST',
         headers: {
-          'Authorization' : 'Basic ZG9ubmNoYTpsM24wcmU=',
+          'Authorization' : tokenauth,
           'Content_Type' : 'multipart/form-data'
         },
         body: body
