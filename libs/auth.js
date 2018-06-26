@@ -10,8 +10,6 @@ const restToken = {
 
   getToken() {
     return new Promise((resolve, reject) =>{
-      const credentials = 'Basic '+ Buffer.from('donncha:l3n0re').toString('base64');
-      console.warn(credentials);
       fetch(tokenroot, {
         method: 'post',
         headers: new Headers({
