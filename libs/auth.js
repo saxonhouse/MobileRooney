@@ -15,7 +15,7 @@ const restToken = {
       fetch(tokenroot, {
         method: 'post',
         headers: new Headers({
-          'Authorization' : credentials,
+          'Authorization' : 'Basic ZG9ubmNoYTpsM24wcmU=',
           'Content_Type' : 'application/x-www-form-urlencoded'
         }),
         body: 'submit=Add Client'
