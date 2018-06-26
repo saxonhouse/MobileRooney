@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-const manager = require('../libs/auth.js');
+const auth = require('../libs/auth.js');
+const manager = auth.manager;
+const restToken = auth.restToken;
 
 export class LoginScreen extends Component {
   constructor(props) {
@@ -12,7 +14,12 @@ export class LoginScreen extends Component {
   login(platform, scopes) {
   console.warn(platform);
   manager.authorize(platform, scopes)
-  .then(resp => console.warn(resp))
+  .then((resp) => {
+    console.warn(resp);
+    restToken.getToken().then(
+      response => console.warn(response);
+    )
+  })
   .catch(err => console.warn(err));
   }
 
