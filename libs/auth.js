@@ -10,10 +10,12 @@ const restToken = {
 
   getToken() {
     return new Promise((resolve, reject) =>{
+      const credentials = 'Basic '+ Buffer.from('donncha:l3n0re').toString('base64');
+      console.warn(credentials);
       fetch(tokenroot, {
         method: 'post',
         headers: new Headers({
-          'Authorization' : 'Basic '+btoa('donncha:l3n0re'),
+          'Authorization' : credentials,
           'Content_Type' : 'application/x-www-form-urlencoded'
         }),
         body: 'submit=Add Client'
@@ -21,6 +23,8 @@ const restToken = {
       .then((response) => {
         resolve(response);
       })
+      .catch((error) => error.json())
+      .then(error => reject.error);
     });
   }
 

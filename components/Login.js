@@ -13,14 +13,15 @@ export class LoginScreen extends Component {
 
   login(platform, scopes) {
   console.warn(platform);
+  manager.deauthorize(platform);
   manager.authorize(platform, scopes)
   .then((resp) => {
     console.warn(resp);
-    restToken.getToken().then(
-      response => console.warn(response);
-    )
+    restToken.getToken()
+    .then(response => console.warn(response))
+    .catch(err => console.warn(err))
   })
-  .catch(err => console.warn(err));
+  .catch(err => console.warn(err))
   }
 
   render() {
