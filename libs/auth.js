@@ -1,28 +1,29 @@
 import OAuthManager from 'react-native-oauth';
 const options = require('./options.js');
 const config = options.config;
-const tokenroot = options.apiroot + '/auth/management';
+const tokenroot = options.tokenroot;
 
 const manager = new OAuthManager('ratemyrooney');
 manager.configure(config);
+let body = new FormData();
+body.append('submit','Add Client');
 
 const restToken = {
 
   getToken() {
     return new Promise((resolve, reject) =>{
       fetch(tokenroot, {
-        method: 'post',
-        headers: new Headers({
+        method: 'POST',
+        headers: {
           'Authorization' : 'Basic ZG9ubmNoYTpsM24wcmU=',
-          'Content_Type' : 'application/x-www-form-urlencoded'
-        }),
-        body: 'submit=Add Client'
+          'Content_Type' : 'multipart/form-data'
+        },
+        body: body
       }).then((response) => response.json())
       .then((response) => {
         resolve(response);
       })
-      .catch((error) => error.json())
-      .then(error => reject.error);
+      .catch(error => reject.error);
     });
   }
 
