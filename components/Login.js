@@ -8,7 +8,11 @@ const restToken = auth.restToken;
 export class LoginScreen extends Component {
   constructor(props) {
     super(props);
-    this.login = this.login.bind(this)
+    this.state = {
+      token: {}
+    }
+    this.login = this.login.bind(this);
+    this.loadBoard = this.loadBoard.bind(this);
   }
 
   login(platform, scopes) {
@@ -18,10 +22,17 @@ export class LoginScreen extends Component {
   .then((resp) => {
     console.warn(resp);
     restToken.getToken()
-    .then(response => console.warn(response))
+    .then((response) => {
+      console.warn(response);
+      this.setState({token: response.client_id})
+    })
     .catch(err => console.warn(err))
   })
   .catch(err => console.warn(err))
+  }
+
+  loadBoard() {
+    this.props.navigation.navigate('RooneyBoard', {getRooney: false, });
   }
 
   render() {
@@ -33,6 +44,7 @@ export class LoginScreen extends Component {
         <Button onPress={() => this.login('facebook')} title={'Login'} />
         <Text> Login with Google</Text>
         <Button onPress={() => this.login('google', {scopes: 'profile'})} title={'Login'} />
+        <Button onPress={this.loadBoard} title={"RooneyBoard"} />
       </View>
     )
   }
