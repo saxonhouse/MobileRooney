@@ -12,7 +12,10 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "test": "jest",
+    "start:server": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
+    "start:client": "cd client && yarn start",
+    "start:dev": "concurrently \"yarn start:server\" \"yarn start:client\""
   },
   "jest": {
     "preset": "react-native"
@@ -37,6 +40,7 @@
     "react-native-sound": "^0.10.9",
     "react-native-uuid": "^1.4.9",
     "react-navigation": "^1.5.12",
-    "rnpm": "^1.9.0"
+    "rnpm": "^1.9.0",
+    "yarn": "^1.7.0"
   }
 }
