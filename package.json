@@ -12,7 +12,10 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "test": "jest",
+    "start:server": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
+    "start:client": "cd client && npm start",
+    "start:dev": "concurrently \"npm start:server\" \"npm start:client\""
   },
   "jest": {
     "preset": "react-native"
