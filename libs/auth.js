@@ -2,7 +2,9 @@ import OAuthManager from 'react-native-oauth';
 const options = require('./options.js');
 const config = options.config;
 const tokenroot = options.tokenroot;
+const tokenroot2 = options.tokenroot2;
 const tokenauth = options.tokenauth;
+
 
 const manager = new OAuthManager('ratemyrooney');
 manager.configure(config);
@@ -12,7 +14,7 @@ body.append('submit','Add Client');
 const restToken = {
 
   getToken() {
-    return new Promise((resolve, reject) =>{
+    return new Promise((resolve, reject) => {
       fetch(tokenroot, {
         method: 'POST',
         headers: {
@@ -22,10 +24,21 @@ const restToken = {
         body: body
       }).then((response) => response.json())
       .then((response) => {
-        resolve(response);
-      })
-      .catch(error => reject.error);
-    });
+         fetch(tokenroot2, {
+          method: 'POST',
+          headers: {
+            'Content_Type' : 'multipart/form-data'
+          },
+          body: '?client_id='+response.client_id+'&grant_type=password&username=donncha&password=l3n0re'
+          })
+          .then((response) => response.json())
+
+          .then((response) => resolve(response))
+          .catch((error) => reject(error));
+        })
+
+        .catch((error) => reject(error));
+      });
   }
 
 }
