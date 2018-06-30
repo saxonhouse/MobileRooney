@@ -23,21 +23,8 @@ const restToken = {
         },
         body: body
       }).then((response) => response.json())
-      .then((response) => {
-         fetch(tokenroot2, {
-          method: 'POST',
-          headers: {
-            'Content_Type' : 'multipart/form-data'
-          },
-          body: '?client_id='+response.client_id+'&grant_type=password&username=donncha&password=l3n0re'
-          })
-          .then((response) => response.json())
-
-          .then((response) => resolve(response))
-          .catch((error) => reject(error));
-        })
-
-        .catch((error) => reject(error));
+      .then((response) => resolve(response))
+      .catch((error) => reject(error));
       });
   }
 
