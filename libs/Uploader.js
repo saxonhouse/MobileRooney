@@ -1,7 +1,7 @@
 import { RNS3 } from 'react-native-aws3';
 const options = require('./options.js');
 const s3options = options.s3options;
-var apiroot = options.apiroot;
+var apiroot = 'options.apiroot;'
 
 const Uploader = {
 
