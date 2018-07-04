@@ -1,7 +1,7 @@
 import { RNS3 } from 'react-native-aws3';
 const options = require('./options.js');
 const s3options = options.s3options;
-var apiroot = 'options.apiroot;'
+var apiroot = options.apiroot;
 
 const Uploader = {
 
@@ -22,7 +22,6 @@ const Uploader = {
       fetch(apiroot, {
         method: 'POST',
         headers: {
-          Accept: 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),

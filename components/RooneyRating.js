@@ -8,6 +8,9 @@ var Uploader = require('../libs/Uploader.js');
 export class RooneyRatingScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      error: '',
+    }
     this.submit = this.submit.bind(this);
     this.discard = this.discard.bind(this);
   }
@@ -19,9 +22,11 @@ export class RooneyRatingScreen extends Component {
       score: this.props.navigation.state.params.score,
     }
     Uploader.upload(this.props.navigation.state.file, filename, data).then((response) => {
-      this.props.navigation.navigate('RooneyBoard', {getRooney: true, id: response._id});
+      console.warn(response);
+      this.props.navigation.navigate('RooneyBoard', {getRooney: true, rooney: response.data});
     }).catch((e) => {
       this.setState({error: e.message});
+      console.warn(e);
       return
     });
 
@@ -40,6 +45,7 @@ export class RooneyRatingScreen extends Component {
         <Text> Enter your initials to submit your Rooney to the Rooneyboard</Text>
         <RooneyForm onRooneySubmit={this.submit} />
         <Button onPress={this.discard} title={"Discard"} />
+        <Text> {this.state.error} </Text>
       </View>
     )
   }

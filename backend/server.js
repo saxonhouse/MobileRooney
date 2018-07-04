@@ -49,9 +49,9 @@ router.post('/rooneys', (req, res) => {
   rooney.player = player;
   rooney.audio = audio;
   rooney.score = score;
-  rooney.save(err => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
+  rooney.save((err, rooney) => {
+    if (err) return res.json({ error: err });
+    return res.json({ data: roooney });
   });
 });
 

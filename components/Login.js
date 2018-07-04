@@ -16,19 +16,14 @@ export class LoginScreen extends Component {
   }
 
   login(platform, scopes) {
-  console.warn(platform);
   manager.deauthorize(platform);
   manager.authorize(platform, scopes)
-  .then((resp) => {
-    console.warn(resp);
-    restToken.getToken()
-    .then((response) => {
-      console.warn(response);
-      this.setState({token: response.client_id})
+  .then((response) => {
+    console.warn(response);
+    this.setState({token: response})
+    this.props.navigation.navigate('RooneyRecorder', {token: response, });
     })
     .catch(err => console.warn(err))
-  })
-  .catch(err => console.warn(err))
   }
 
   loadBoard() {
