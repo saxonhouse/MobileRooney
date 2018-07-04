@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
 const options = require('../libs/options.js');
-var dbUri = options.dburi;
+var dbUri = options.dbUri;
 import Rooney from './model/rooney.js';
 
 // and create our instances
