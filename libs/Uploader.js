@@ -30,6 +30,8 @@ const Uploader = {
         resolve(response);
       }).catch((error) => {
         reject(error);
+        console.warn(error);
+        console.log('buggywug ' + error)
       });
     });
 

@@ -77,7 +77,7 @@ export class RooneyBoardScreen extends Component {
       return (
         <View>
           <Text> Your Rooney </Text>
-          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score} token={this.props.navigation.state.token.aws}/>
+          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score} token={this.props.navigation.state.params.token.aws}/>
         </View>
       );
     }
