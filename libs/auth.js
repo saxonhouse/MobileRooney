@@ -11,22 +11,28 @@ AWS.config.region = 'us-east-1'; // Region
 const awsAuth = {
 
 awsLogin(platform,response) {
-  var loginSettings = {
-    'facebook' : {
-      'graph.facebook.com': response.authResponse.accessToken
-    },
-    'google' : {
-      'accounts.google.com': authResult['id_token']
-    },
-    'twitter' : {
-      'api.twitter.com' : response.token // CHECK THIS
+    let login;
+    if (platform === 'facebook') {
+      login = {
+        'graph.facebook.com': response.authResponse.accessToken
+      }
     }
-  }
+    if (platform === 'google') {
+      login = {
+        'accounts.google.com': authResult['id_token']
+      }
+    }
+    if (platform === 'twitter') {
+      login = {
+      'api.twitter.com' : response.token // CHECK THIS
+      }
+    }
+
 
   return new Promise((resolve,reject) => {
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: options.cognitoPoolId,
-      Logins: loginSettings[platform]
+      Logins: login
       });
 
       // Obtain AWS credentials
