@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-const auth = require('../libs/auth.js');
-const manager = auth.manager;
-const restToken = auth.restToken;
+const awsAuth = require('../libs/auth.js');
 
 export class LoginScreen extends Component {
   constructor(props) {
@@ -21,7 +19,14 @@ export class LoginScreen extends Component {
   .then((response) => {
     console.warn(response);
     this.setState({token: response})
-    this.props.navigation.navigate('RooneyRecorder', {token: response, });
+    auth.awsAuth(platform,response)
+    .then((response) => {
+      token = {
+        oauth: this.state.token,
+        aws: response
+      }
+      this.props.navigation.navigate('RooneyRecorder', {token: token});
+    }).catch(err => console.warn(err))
     })
     .catch(err => console.warn(err))
   }
