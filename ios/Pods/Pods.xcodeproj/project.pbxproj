@@ -16,7 +16,7 @@
 		15BCBBAF9050D1FC6DC3A94B0B111697 /* DCTBasicAuthCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = A217ED0BA905E2876EA70CF5E02848DC /* DCTBasicAuthCredential.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1773CC3BB9BB834EE9ACD186D3A42B97 /* DCTAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AE441C81EDB4E562AC7AB29EC17E0D9 /* DCTAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C904BA67E24FC44A4C97FD9C3CA10E0 /* DCTAuthMultipartData.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9AD511732B4D25474B2730844C1B53 /* DCTAuthMultipartData.m */; };
-		23414FDC0008A77FF31979AD51C2C157 /* Pods-MobileRooney-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5123D85FDA620A4C491BAE9242816325 /* Pods-MobileRooney-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23414FDC0008A77FF31979AD51C2C157 /* Pods-MobileRooney-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0631692C4AD26F2E2D57E59F34DE5B /* Pods-MobileRooney-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26F84F2A5EA9C7FEE81CCFDDE083221E /* DCTOAuth1SignatureType.h in Headers */ = {isa = PBXBuildFile; fileRef = AF51943A7ACB9E0482546DAA713F1F41 /* DCTOAuth1SignatureType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		29C67763410C1C5AA0311CEBCBE9F8F0 /* NSString+DCTAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A72A1B99EAE761C6C31E62872F9DE /* NSString+DCTAuth.m */; };
 		2BBB4727AE3A5FF36319B6DA5178EC89 /* DCTAuthURLRequestPerformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A82033DD052426E15DE9AFD2DB4D48F3 /* DCTAuthURLRequestPerformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -29,6 +29,7 @@
 		44E829018F04EA3592B44B752A6B04BD /* DCTOAuth2RequestType.h in Headers */ = {isa = PBXBuildFile; fileRef = 44121DAFCA7C7121E3EB1BD201D9B043 /* DCTOAuth2RequestType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		49FEFA36486A328FBF432312059C6926 /* DCTOAuth1Signature.h in Headers */ = {isa = PBXBuildFile; fileRef = 874F414B749FAEC24C88ED001F89FF9A /* DCTOAuth1Signature.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		52A306594DBC3541E83BC3BB665EBDB4 /* DCTOAuth1ParameterTransmission.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C156B2B1F8644E707543B8E231D1A3 /* DCTOAuth1ParameterTransmission.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		596DBA21F647CB4E314926EFD9BABF4E /* Pods-MobileRooney-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5636776FBF8D02F0A1CEDA06C32D18 /* Pods-MobileRooney-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C18E9CB1D7FA268171A61951127ED8E /* DCTAuthURLOpenerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C04E2DF65AD4C429B85DABE5F69BA5B3 /* DCTAuthURLOpenerOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5DD22C8605E9213DB27511C63BF00ADF /* DCTAuthPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = DE58D5F5741E94BD39D42494945305C5 /* DCTAuthPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64C5787FD4C3D5C570C8676673D55BDF /* DCTOAuth1Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BFD7C05AEC6676400DD0002C3E2A3A8 /* DCTOAuth1Account.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -36,8 +37,9 @@
 		6AFB5DA17745360988AA134EF15C5F0E /* DCTAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1F913103E64B71EBD82738C587ED80 /* DCTAuth-dummy.m */; };
 		6C56534A7BA40E7C8A56030A709B5D38 /* DCTBasicAuthAccount.h in Headers */ = {isa = PBXBuildFile; fileRef = 9510102DF1CF3C52528D6D62A733E387 /* DCTBasicAuthAccount.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6F3D65F366F436FE4F05F9B53ABA33F5 /* DCTAuthAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C3AB18774E4A4FB633644F41A26D6 /* DCTAuthAccount.m */; };
+		6F80F8A7F3BD029CC4298D1758542312 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		6FC968EAD7CA3F03538C6674689735B4 /* DCTAuthURLOpenerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1E936EC853BCCB7ECD54F429B72A95 /* DCTAuthURLOpenerOperation.m */; };
-		731D653AEB30A87FA9DB81777A3914B5 /* Pods-MobileRooney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4042CD6E222869DB0BCC8F698E3954F1 /* Pods-MobileRooney-dummy.m */; };
+		731D653AEB30A87FA9DB81777A3914B5 /* Pods-MobileRooney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CC1C8430B92A932B84349299F85100 /* Pods-MobileRooney-dummy.m */; };
 		7636E9509EE9C65B0E3407846FF2DC62 /* DCTBasicAuthAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 999A937D311A769343E8DD6D55AFFBF7 /* DCTBasicAuthAccount.m */; };
 		7D405D3A0018A438503AA4EC5F63DA19 /* DCTAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F368FA3AAA6E91A7B5F448050F6203D3 /* DCTAuth.m */; };
 		80ED268CCC39B32E95640CDBAF304B34 /* DCTAuthAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F256FCD53FC942FD2270A959004DC39 /* DCTAuthAccountStore.m */; };
@@ -67,6 +69,7 @@
 		CC4A5888A88A9C05443F1A06B28EDCEA /* DCTAuthRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9EB66C26BC0DB9A62E9D41A95CFF6 /* DCTAuthRequestMethod.m */; };
 		D077956A3CF7C693F6B3CA6B5BD12703 /* DCTAuthURLRequestPerformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB54A60F69280B6EC5A73EBC475FE82 /* DCTAuthURLRequestPerformer.m */; };
 		D4DC0BD9ADA0A2030EB7EB02305204DB /* DCTOAuth1Credential.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB33D0ECB71E656E20C80F72628CF7A /* DCTOAuth1Credential.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6F7B4F393DC99481C2FB5FA86396594 /* Pods-MobileRooney-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5173C5D5999284A816F507E6D10C60EC /* Pods-MobileRooney-tvOS-dummy.m */; };
 		DD8A1AD8D13E8CF38229E8FCBF7E1DD3 /* DCTAuthAccountStoreQueryDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3321C6AE4F13C46DA7DC38A382C37B /* DCTAuthAccountStoreQueryDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DECA4AF8510CAC8DCDCF3A8B3D6B4AF8 /* DCTOAuth1Keys.h in Headers */ = {isa = PBXBuildFile; fileRef = 979A48A66F03F5598886D59CC0194225 /* DCTOAuth1Keys.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E189A0C28111FFBCABBC71291109C959 /* DCTAuthContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9840A55B02330733DEEC85E526F5E12E /* DCTAuthContentType.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -80,6 +83,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		070770D551DA0C12DA2ECE46BE76719E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073CE0154758777B2E46C5CBFE578C54;
+			remoteInfo = DCTAuth;
+		};
 		AD67588F9667300CA9704BD3D58FB095 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -90,9 +100,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008AE03AB0BE9A9C700013226C3AAEFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08048C66A868C4AAC20742F2DE403B9C /* DCTAuthResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthResponse.m; path = DCTAuth/DCTAuthResponse.m; sourceTree = "<group>"; };
 		0D8CAD301082A90511ECE0C8F9B22C02 /* DCTOAuth2Keys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth2Keys.m; path = DCTAuth/DCTOAuth2Keys.m; sourceTree = "<group>"; };
+		101E082DBE11712DC6F1296A50AF6133 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1447615E4A028C4EDA0B9CDB0CDE1221 /* Pods-MobileRooney-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-tvOS-resources.sh"; sourceTree = "<group>"; };
 		17ED29BAD4DBE64FE2E6693419162FC8 /* DCTBasicAuthCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTBasicAuthCredential.m; path = DCTAuth/DCTBasicAuthCredential.m; sourceTree = "<group>"; };
 		19BBFA92CABA346BDFEBE6224C98C658 /* DCTAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DCTAuth-prefix.pch"; sourceTree = "<group>"; };
 		1AF5A1B426003E091049D774E7493811 /* DCTAuthAccount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccount.h; path = DCTAuth/DCTAuthAccount.h; sourceTree = "<group>"; };
@@ -100,42 +111,45 @@
 		2000D991D2B725FFAEC871FFA7112A57 /* DCTOAuth1Credential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth1Credential.m; path = DCTAuth/DCTOAuth1Credential.m; sourceTree = "<group>"; };
 		2409A7BD6DC8772F9B41808FF8345237 /* DCTAuthURLOpener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthURLOpener.h; path = DCTAuth/DCTAuthURLOpener.h; sourceTree = "<group>"; };
 		2A3321C6AE4F13C46DA7DC38A382C37B /* DCTAuthAccountStoreQueryDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccountStoreQueryDelegate.h; path = DCTAuth/DCTAuthAccountStoreQueryDelegate.h; sourceTree = "<group>"; };
-		2A7DEE9CDE06755BF014BA05273B1BBD /* Pods-MobileRooney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileRooney-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2AE441C81EDB4E562AC7AB29EC17E0D9 /* DCTAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DCTAuth-umbrella.h"; sourceTree = "<group>"; };
+		2B64A0710F7518389E6A2107BB9FF0E9 /* Pods-MobileRooney-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileRooney-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		2C5C93A987AFA167658F7C9573326A22 /* NSKeyedUnarchiver+DCTAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSKeyedUnarchiver+DCTAuth.m"; path = "DCTAuth/NSKeyedUnarchiver+DCTAuth.m"; sourceTree = "<group>"; };
 		2D8C14D787E892F8074C467F3257FF04 /* DCTOAuth2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth2.m; path = DCTAuth/DCTOAuth2.m; sourceTree = "<group>"; };
 		3024502E20991D185DC8FB70F2600EB3 /* DCTOAuth1Signature.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth1Signature.m; path = DCTAuth/DCTOAuth1Signature.m; sourceTree = "<group>"; };
 		310CE46C51F5778B0366147F2F212372 /* DCTOAuth2Credential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth2Credential.h; path = DCTAuth/DCTOAuth2Credential.h; sourceTree = "<group>"; };
 		31A2124CFDAA14951A6BBBD8667A52FC /* DCTAuthMultipartData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthMultipartData.h; path = DCTAuth/DCTAuthMultipartData.h; sourceTree = "<group>"; };
 		38F33717D4894602A7EF5D95D67BA0F0 /* DCTAuthAccountCredential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccountCredential.h; path = DCTAuth/DCTAuthAccountCredential.h; sourceTree = "<group>"; };
+		398F73563A784C3C77CC293BF6A9F219 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BFD7C05AEC6676400DD0002C3E2A3A8 /* DCTOAuth1Account.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1Account.h; path = DCTAuth/DCTOAuth1Account.h; sourceTree = "<group>"; };
 		3DB54A60F69280B6EC5A73EBC475FE82 /* DCTAuthURLRequestPerformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthURLRequestPerformer.m; path = DCTAuth/DCTAuthURLRequestPerformer.m; sourceTree = "<group>"; };
 		3FD6A409D6E595537CC26BC94B42D5C9 /* DCTOAuth2Account.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth2Account.h; path = DCTAuth/DCTOAuth2Account.h; sourceTree = "<group>"; };
 		3FE64519C7BB7BD62DE4CD02ABBE96E6 /* DCTAuthContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthContent.m; path = DCTAuth/DCTAuthContent.m; sourceTree = "<group>"; };
-		4042CD6E222869DB0BCC8F698E3954F1 /* Pods-MobileRooney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileRooney-dummy.m"; sourceTree = "<group>"; };
-		414BA09158860BA11674F10CFB6AFF20 /* Pods-MobileRooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney.release.xcconfig"; sourceTree = "<group>"; };
 		415E9E65C6C357A604570531DF1947ED /* DCTAuthAccountStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccountStore.h; path = DCTAuth/DCTAuthAccountStore.h; sourceTree = "<group>"; };
 		44121DAFCA7C7121E3EB1BD201D9B043 /* DCTOAuth2RequestType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth2RequestType.h; path = DCTAuth/DCTOAuth2RequestType.h; sourceTree = "<group>"; };
 		486A72A1B99EAE761C6C31E62872F9DE /* NSString+DCTAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+DCTAuth.m"; path = "DCTAuth/NSString+DCTAuth.m"; sourceTree = "<group>"; };
+		486EE04696BF8991956D8F1E047F0C18 /* Pods-MobileRooney.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileRooney.modulemap"; sourceTree = "<group>"; };
 		4A8EDAB2173DC2E50149BEF43B4BF3F5 /* DCTAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DCTAuth.modulemap; sourceTree = "<group>"; };
+		4B87E3FF61C528DC1420124C8AAE9D83 /* Pods-MobileRooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney.debug.xcconfig"; sourceTree = "<group>"; };
 		4BAAAB1DE8A0F70C3ACAF62FDF5D6E7E /* DCTAuthAccountStoreQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthAccountStoreQuery.m; path = DCTAuth/DCTAuthAccountStoreQuery.m; sourceTree = "<group>"; };
 		4DF9EB66C26BC0DB9A62E9D41A95CFF6 /* DCTAuthRequestMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthRequestMethod.m; path = DCTAuth/DCTAuthRequestMethod.m; sourceTree = "<group>"; };
 		4E8CB8C90206CB66B0F6E0B8ED655D96 /* DCTAuthKeychainAccess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthKeychainAccess.h; path = DCTAuth/DCTAuthKeychainAccess.h; sourceTree = "<group>"; };
 		4FB6E11F806EB7F829B65F9236FAFE9F /* DCTAbstractAuthAccountProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAbstractAuthAccountProperties.m; path = DCTAuth/DCTAbstractAuthAccountProperties.m; sourceTree = "<group>"; };
-		5123D85FDA620A4C491BAE9242816325 /* Pods-MobileRooney-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileRooney-umbrella.h"; sourceTree = "<group>"; };
+		5173C5D5999284A816F507E6D10C60EC /* Pods-MobileRooney-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileRooney-tvOS-dummy.m"; sourceTree = "<group>"; };
 		54399C8EEE06529F509E88B9EEB57D12 /* DCTAuthPlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthPlatform.m; path = DCTAuth/DCTAuthPlatform.m; sourceTree = "<group>"; };
 		584A3087A34D46D6B991EEA67CE38972 /* DCTAuthAccountStoreQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccountStoreQuery.h; path = DCTAuth/DCTAuthAccountStoreQuery.h; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		60DD8340131254F83D93F518E791F5D3 /* DCTAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DCTAuth.framework; path = DCTAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC61BFBB874FC9FB90B509501A7BEB8 /* Pods-MobileRooney-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		6D79650327D384B7F5D20D7EE25E6AB8 /* DCTAuthKeychainAccess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthKeychainAccess.m; path = DCTAuth/DCTAuthKeychainAccess.m; sourceTree = "<group>"; };
 		6F256FCD53FC942FD2270A959004DC39 /* DCTAuthAccountStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthAccountStore.m; path = DCTAuth/DCTAuthAccountStore.m; sourceTree = "<group>"; };
 		72CCB8B0570B36658AF6A5AA0CACAD47 /* DCTAuthResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthResponse.h; path = DCTAuth/DCTAuthResponse.h; sourceTree = "<group>"; };
+		7341BA6D826C0C557A0FAB57D9F9FF9C /* Pods-MobileRooney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-resources.sh"; sourceTree = "<group>"; };
 		73A254E8486D01B7777105F990E35734 /* DCTAuthRequestMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthRequestMethod.h; path = DCTAuth/DCTAuthRequestMethod.h; sourceTree = "<group>"; };
+		7E5AAC695EE010FD1CF32CFA5754D6A2 /* Pods-MobileRooney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileRooney-acknowledgements.markdown"; sourceTree = "<group>"; };
+		80CC1C8430B92A932B84349299F85100 /* Pods-MobileRooney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileRooney-dummy.m"; sourceTree = "<group>"; };
 		8102C359316C20AEC139E219A7EC00D3 /* DCTAuthURLOpener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthURLOpener.m; path = DCTAuth/DCTAuthURLOpener.m; sourceTree = "<group>"; };
-		826EEA655E74E6361581B40D347BDC9D /* Pods-MobileRooney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileRooney-acknowledgements.plist"; sourceTree = "<group>"; };
+		8455CF6E3E0FC676A14A058030052BDF /* Pods-MobileRooney-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-tvOS-frameworks.sh"; sourceTree = "<group>"; };
 		874F414B749FAEC24C88ED001F89FF9A /* DCTOAuth1Signature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1Signature.h; path = DCTAuth/DCTOAuth1Signature.h; sourceTree = "<group>"; };
 		8C8457FE912B82D1AE266B7728868F2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F144EDC33AAE10F0D79747650778EAE /* Pods_MobileRooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileRooney.framework; path = "Pods-MobileRooney.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9510102DF1CF3C52528D6D62A733E387 /* DCTBasicAuthAccount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTBasicAuthAccount.h; path = DCTAuth/DCTBasicAuthAccount.h; sourceTree = "<group>"; };
 		97807517307BED59A74AC4DF2A6E036E /* NSKeyedUnarchiver+DCTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSKeyedUnarchiver+DCTAuth.h"; path = "DCTAuth/NSKeyedUnarchiver+DCTAuth.h"; sourceTree = "<group>"; };
@@ -143,40 +157,55 @@
 		979A48A66F03F5598886D59CC0194225 /* DCTOAuth1Keys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1Keys.h; path = DCTAuth/DCTOAuth1Keys.h; sourceTree = "<group>"; };
 		9840A55B02330733DEEC85E526F5E12E /* DCTAuthContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthContentType.h; path = DCTAuth/DCTAuthContentType.h; sourceTree = "<group>"; };
 		999A937D311A769343E8DD6D55AFFBF7 /* DCTBasicAuthAccount.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTBasicAuthAccount.m; path = DCTAuth/DCTBasicAuthAccount.m; sourceTree = "<group>"; };
+		99DE416B6E27429FCAE7DC67AD25C02B /* Pods-MobileRooney-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9DB342E311C5B9C373F21AB6FAF68F71 /* DCTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuth.h; path = DCTAuth/DCTAuth.h; sourceTree = "<group>"; };
-		9E5239C5023AA2698A0E02298A84BD03 /* Pods-MobileRooney.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileRooney.modulemap"; sourceTree = "<group>"; };
-		A20A74F05045CE6E961802A2007F24B1 /* Pods-MobileRooney-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-frameworks.sh"; sourceTree = "<group>"; };
 		A217ED0BA905E2876EA70CF5E02848DC /* DCTBasicAuthCredential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTBasicAuthCredential.h; path = DCTAuth/DCTBasicAuthCredential.h; sourceTree = "<group>"; };
 		A21CFC8533AE7507BDBF058908769F27 /* DCTOAuth2Keys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth2Keys.h; path = DCTAuth/DCTOAuth2Keys.h; sourceTree = "<group>"; };
 		A59BFE045967466E216713944E57049E /* DCTAuthAccountStore+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DCTAuthAccountStore+Private.h"; path = "DCTAuth/DCTAuthAccountStore+Private.h"; sourceTree = "<group>"; };
 		A7E20E597BF3F4B682D9103D1B582B3D /* DCTAuthRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthRequest.m; path = DCTAuth/DCTAuthRequest.m; sourceTree = "<group>"; };
 		A82033DD052426E15DE9AFD2DB4D48F3 /* DCTAuthURLRequestPerformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthURLRequestPerformer.h; path = DCTAuth/DCTAuthURLRequestPerformer.h; sourceTree = "<group>"; };
 		A96A4CD66C025B01AABD5553A096FE65 /* NSString+DCTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DCTAuth.h"; path = "DCTAuth/NSString+DCTAuth.h"; sourceTree = "<group>"; };
+		A96C66EAD4AE085838467ED748614934 /* Pods-MobileRooney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileRooney-acknowledgements.plist"; sourceTree = "<group>"; };
 		A9C156B2B1F8644E707543B8E231D1A3 /* DCTOAuth1ParameterTransmission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1ParameterTransmission.h; path = DCTAuth/DCTOAuth1ParameterTransmission.h; sourceTree = "<group>"; };
+		AC0631692C4AD26F2E2D57E59F34DE5B /* Pods-MobileRooney-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileRooney-umbrella.h"; sourceTree = "<group>"; };
+		ACA14612465555624778F8BC6608B010 /* Pods_MobileRooney_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileRooney_tvOS.framework; path = "Pods-MobileRooney-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF51943A7ACB9E0482546DAA713F1F41 /* DCTOAuth1SignatureType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1SignatureType.h; path = DCTAuth/DCTOAuth1SignatureType.h; sourceTree = "<group>"; };
 		B2B361A38FEB78E289FC87B4D82F655A /* DCTOAuth2RequestType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth2RequestType.m; path = DCTAuth/DCTOAuth2RequestType.m; sourceTree = "<group>"; };
 		B3F60BED6A16FEE164AAE6E78F9E0D02 /* DCTAuthContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthContent.h; path = DCTAuth/DCTAuthContent.h; sourceTree = "<group>"; };
 		B74F3E41AFA451D4C5081078A5FB3E3F /* DCTAuthAccountSubclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthAccountSubclass.h; path = DCTAuth/DCTAuthAccountSubclass.h; sourceTree = "<group>"; };
+		BA5636776FBF8D02F0A1CEDA06C32D18 /* Pods-MobileRooney-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileRooney-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		BE9AD511732B4D25474B2730844C1B53 /* DCTAuthMultipartData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthMultipartData.m; path = DCTAuth/DCTAuthMultipartData.m; sourceTree = "<group>"; };
 		C04E2DF65AD4C429B85DABE5F69BA5B3 /* DCTAuthURLOpenerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthURLOpenerOperation.h; path = DCTAuth/DCTAuthURLOpenerOperation.h; sourceTree = "<group>"; };
 		C62DF30BB03D415AEB8DB4200C412D7E /* DCTOAuth2Account.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth2Account.m; path = DCTAuth/DCTOAuth2Account.m; sourceTree = "<group>"; };
 		C65C3AB18774E4A4FB633644F41A26D6 /* DCTAuthAccount.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthAccount.m; path = DCTAuth/DCTAuthAccount.m; sourceTree = "<group>"; };
 		CAC108544678A8B6AB8D6F8912A80830 /* DCTAbstractAuthAccountProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAbstractAuthAccountProperties.h; path = DCTAuth/DCTAbstractAuthAccountProperties.h; sourceTree = "<group>"; };
 		CE6511B217969D8CC98FB52C3C1C8591 /* DCTOAuth2Credential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth2Credential.m; path = DCTAuth/DCTOAuth2Credential.m; sourceTree = "<group>"; };
-		D5197CE053B93249DBC770C3177402FE /* Pods-MobileRooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney.debug.xcconfig"; sourceTree = "<group>"; };
 		D9F19EE5B2BA8CBE7F7DAA009993A783 /* DCTAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DCTAuth.xcconfig; sourceTree = "<group>"; };
 		DCB33D0ECB71E656E20C80F72628CF7A /* DCTOAuth1Credential.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth1Credential.h; path = DCTAuth/DCTOAuth1Credential.h; sourceTree = "<group>"; };
 		DE58D5F5741E94BD39D42494945305C5 /* DCTAuthPlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTAuthPlatform.h; path = DCTAuth/DCTAuthPlatform.h; sourceTree = "<group>"; };
 		E25424554C9D9E5132B57221F8289348 /* DCTAuthAccount+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DCTAuthAccount+Private.h"; path = "DCTAuth/DCTAuthAccount+Private.h"; sourceTree = "<group>"; };
 		E624FE06F50E66DE69D5096204F73F61 /* DCTOAuth1Account.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth1Account.m; path = DCTAuth/DCTOAuth1Account.m; sourceTree = "<group>"; };
-		E651DBA66933C8912AA638B66A1DA7FD /* Pods-MobileRooney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-resources.sh"; sourceTree = "<group>"; };
+		E8A8A0D8B19DBBAC10B2946D886C4F9F /* Pods_MobileRooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileRooney.framework; path = "Pods-MobileRooney.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBECDD116EB8BA731CC4FB4CD5F96EFB /* Pods-MobileRooney-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileRooney-frameworks.sh"; sourceTree = "<group>"; };
 		EF1E936EC853BCCB7ECD54F429B72A95 /* DCTAuthURLOpenerOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuthURLOpenerOperation.m; path = DCTAuth/DCTAuthURLOpenerOperation.m; sourceTree = "<group>"; };
+		F1F481C34A617F7290ED098D6D103EBF /* Pods-MobileRooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileRooney.release.xcconfig"; sourceTree = "<group>"; };
 		F368FA3AAA6E91A7B5F448050F6203D3 /* DCTAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTAuth.m; path = DCTAuth/DCTAuth.m; sourceTree = "<group>"; };
 		F4477C7663A70658B1222DCFAF45DA1E /* DCTOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DCTOAuth2.h; path = DCTAuth/DCTOAuth2.h; sourceTree = "<group>"; };
+		F660993ED85CAFB5768A63F5BA3C90FE /* Pods-MobileRooney-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileRooney-tvOS.modulemap"; sourceTree = "<group>"; };
+		F7722DFED7664118E17052C0BC712668 /* DCTAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DCTAuth.framework; path = DCTAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBAE414D709C6F1C97FCB24E39353A96 /* Pods-MobileRooney-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileRooney-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FF29007C627D125DFE841875A1340459 /* DCTOAuth1Keys.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DCTOAuth1Keys.m; path = DCTAuth/DCTOAuth1Keys.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		561456F1C83465378208A2A84D0155C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F80F8A7F3BD029CC4298D1758542312 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5854689B7AFFDF1701028A90A72C39A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,12 +239,40 @@
 			path = "../Target Support Files/DCTAuth";
 			sourceTree = "<group>";
 		};
+		3B27FB904767EDC0C0C02CEF96811C1A /* Pods-MobileRooney-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				398F73563A784C3C77CC293BF6A9F219 /* Info.plist */,
+				F660993ED85CAFB5768A63F5BA3C90FE /* Pods-MobileRooney-tvOS.modulemap */,
+				FBAE414D709C6F1C97FCB24E39353A96 /* Pods-MobileRooney-tvOS-acknowledgements.markdown */,
+				2B64A0710F7518389E6A2107BB9FF0E9 /* Pods-MobileRooney-tvOS-acknowledgements.plist */,
+				5173C5D5999284A816F507E6D10C60EC /* Pods-MobileRooney-tvOS-dummy.m */,
+				8455CF6E3E0FC676A14A058030052BDF /* Pods-MobileRooney-tvOS-frameworks.sh */,
+				1447615E4A028C4EDA0B9CDB0CDE1221 /* Pods-MobileRooney-tvOS-resources.sh */,
+				BA5636776FBF8D02F0A1CEDA06C32D18 /* Pods-MobileRooney-tvOS-umbrella.h */,
+				99DE416B6E27429FCAE7DC67AD25C02B /* Pods-MobileRooney-tvOS.debug.xcconfig */,
+				5DC61BFBB874FC9FB90B509501A7BEB8 /* Pods-MobileRooney-tvOS.release.xcconfig */,
+			);
+			name = "Pods-MobileRooney-tvOS";
+			path = "Target Support Files/Pods-MobileRooney-tvOS";
+			sourceTree = "<group>";
+		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F45E63D44FC3523543D51A3F5C80F16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7722DFED7664118E17052C0BC712668 /* DCTAuth.framework */,
+				E8A8A0D8B19DBBAC10B2946D886C4F9F /* Pods_MobileRooney.framework */,
+				ACA14612465555624778F8BC6608B010 /* Pods_MobileRooney_tvOS.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6E23DFCD2F9A7910FC314940CFA01103 /* DCTAuth */ = {
@@ -291,23 +348,33 @@
 			path = DCTAuth;
 			sourceTree = "<group>";
 		};
-		777CBB7875F9BA242BFE4E53CD3EB02C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D72D4452E6056C9E2AFEA8784A903D55 /* Pods-MobileRooney */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				B2CCF3879CB678FB9A5324BFC6AB1625 /* Pods */,
-				EDCE541DF5B11F47C9B8299D13181364 /* Products */,
-				777CBB7875F9BA242BFE4E53CD3EB02C /* Targets Support Files */,
+				5F45E63D44FC3523543D51A3F5C80F16 /* Products */,
+				D0C2CDD4DEA330175DA1AB65CA979EBD /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		95C3CF51A5379054E7EC3EF07F8B50CA /* Pods-MobileRooney */ = {
+			isa = PBXGroup;
+			children = (
+				101E082DBE11712DC6F1296A50AF6133 /* Info.plist */,
+				486EE04696BF8991956D8F1E047F0C18 /* Pods-MobileRooney.modulemap */,
+				7E5AAC695EE010FD1CF32CFA5754D6A2 /* Pods-MobileRooney-acknowledgements.markdown */,
+				A96C66EAD4AE085838467ED748614934 /* Pods-MobileRooney-acknowledgements.plist */,
+				80CC1C8430B92A932B84349299F85100 /* Pods-MobileRooney-dummy.m */,
+				EBECDD116EB8BA731CC4FB4CD5F96EFB /* Pods-MobileRooney-frameworks.sh */,
+				7341BA6D826C0C557A0FAB57D9F9FF9C /* Pods-MobileRooney-resources.sh */,
+				AC0631692C4AD26F2E2D57E59F34DE5B /* Pods-MobileRooney-umbrella.h */,
+				4B87E3FF61C528DC1420124C8AAE9D83 /* Pods-MobileRooney.debug.xcconfig */,
+				F1F481C34A617F7290ED098D6D103EBF /* Pods-MobileRooney.release.xcconfig */,
+			);
+			name = "Pods-MobileRooney";
+			path = "Target Support Files/Pods-MobileRooney";
 			sourceTree = "<group>";
 		};
 		B2CCF3879CB678FB9A5324BFC6AB1625 /* Pods */ = {
@@ -326,31 +393,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D72D4452E6056C9E2AFEA8784A903D55 /* Pods-MobileRooney */ = {
+		D0C2CDD4DEA330175DA1AB65CA979EBD /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				008AE03AB0BE9A9C700013226C3AAEFC /* Info.plist */,
-				9E5239C5023AA2698A0E02298A84BD03 /* Pods-MobileRooney.modulemap */,
-				2A7DEE9CDE06755BF014BA05273B1BBD /* Pods-MobileRooney-acknowledgements.markdown */,
-				826EEA655E74E6361581B40D347BDC9D /* Pods-MobileRooney-acknowledgements.plist */,
-				4042CD6E222869DB0BCC8F698E3954F1 /* Pods-MobileRooney-dummy.m */,
-				A20A74F05045CE6E961802A2007F24B1 /* Pods-MobileRooney-frameworks.sh */,
-				E651DBA66933C8912AA638B66A1DA7FD /* Pods-MobileRooney-resources.sh */,
-				5123D85FDA620A4C491BAE9242816325 /* Pods-MobileRooney-umbrella.h */,
-				D5197CE053B93249DBC770C3177402FE /* Pods-MobileRooney.debug.xcconfig */,
-				414BA09158860BA11674F10CFB6AFF20 /* Pods-MobileRooney.release.xcconfig */,
+				95C3CF51A5379054E7EC3EF07F8B50CA /* Pods-MobileRooney */,
+				3B27FB904767EDC0C0C02CEF96811C1A /* Pods-MobileRooney-tvOS */,
 			);
-			name = "Pods-MobileRooney";
-			path = "Target Support Files/Pods-MobileRooney";
-			sourceTree = "<group>";
-		};
-		EDCE541DF5B11F47C9B8299D13181364 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				60DD8340131254F83D93F518E791F5D3 /* DCTAuth.framework */,
-				8F144EDC33AAE10F0D79747650778EAE /* Pods_MobileRooney.framework */,
-			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +410,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				23414FDC0008A77FF31979AD51C2C157 /* Pods-MobileRooney-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BFF6B8BFCFE7AC1F7C9A1E374B1064F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596DBA21F647CB4E314926EFD9BABF4E /* Pods-MobileRooney-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +482,25 @@
 			);
 			name = DCTAuth;
 			productName = DCTAuth;
-			productReference = 60DD8340131254F83D93F518E791F5D3 /* DCTAuth.framework */;
+			productReference = F7722DFED7664118E17052C0BC712668 /* DCTAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E19A320E6E6E82CF45A3B0798D5ABC6 /* Pods-MobileRooney-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000020DE577587A66CCB77F35499572E /* Build configuration list for PBXNativeTarget "Pods-MobileRooney-tvOS" */;
+			buildPhases = (
+				2711A32C400B67C4BE071B04B063AA76 /* Sources */,
+				561456F1C83465378208A2A84D0155C8 /* Frameworks */,
+				8BFF6B8BFCFE7AC1F7C9A1E374B1064F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD0D2B9573EDCB2C517CC34CBD451714 /* PBXTargetDependency */,
+			);
+			name = "Pods-MobileRooney-tvOS";
+			productName = "Pods-MobileRooney-tvOS";
+			productReference = ACA14612465555624778F8BC6608B010 /* Pods_MobileRooney_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		559EAB0A4D459B6581B1CBC00FC19F06 /* Pods-MobileRooney */ = {
@@ -443,7 +518,7 @@
 			);
 			name = "Pods-MobileRooney";
 			productName = "Pods-MobileRooney";
-			productReference = 8F144EDC33AAE10F0D79747650778EAE /* Pods_MobileRooney.framework */;
+			productReference = E8A8A0D8B19DBBAC10B2946D886C4F9F /* Pods_MobileRooney.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -463,17 +538,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = EDCE541DF5B11F47C9B8299D13181364 /* Products */;
+			productRefGroup = 5F45E63D44FC3523543D51A3F5C80F16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				073CE0154758777B2E46C5CBFE578C54 /* DCTAuth */,
 				559EAB0A4D459B6581B1CBC00FC19F06 /* Pods-MobileRooney */,
+				4E19A320E6E6E82CF45A3B0798D5ABC6 /* Pods-MobileRooney-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2711A32C400B67C4BE071B04B063AA76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F7B4F393DC99481C2FB5FA86396594 /* Pods-MobileRooney-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFB82702EAEEBCAA1DDD3EFF3111F3A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,6 +610,12 @@
 			name = DCTAuth;
 			target = 073CE0154758777B2E46C5CBFE578C54 /* DCTAuth */;
 			targetProxy = AD67588F9667300CA9704BD3D58FB095 /* PBXContainerItemProxy */;
+		};
+		FD0D2B9573EDCB2C517CC34CBD451714 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DCTAuth;
+			target = 073CE0154758777B2E46C5CBFE578C54 /* DCTAuth */;
+			targetProxy = 070770D551DA0C12DA2ECE46BE76719E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,6 +714,73 @@
 			};
 			name = Release;
 		};
+		9528382A9ABA5C232AA206F6717CB53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC61BFBB874FC9FB90B509501A7BEB8 /* Pods-MobileRooney-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileRooney-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileRooney-tvOS/Pods-MobileRooney-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9ED3616D9374ECBA0626F41607C61E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99DE416B6E27429FCAE7DC67AD25C02B /* Pods-MobileRooney-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileRooney-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileRooney-tvOS/Pods-MobileRooney-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A32009F3F280B989F92A7352CD819686 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9F19EE5B2BA8CBE7F7DAA009993A783 /* DCTAuth.xcconfig */;
@@ -656,7 +813,7 @@
 		};
 		A944ACEC8B8FE0CED982C91C55F881EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5197CE053B93249DBC770C3177402FE /* Pods-MobileRooney.debug.xcconfig */;
+			baseConfigurationReference = 4B87E3FF61C528DC1420124C8AAE9D83 /* Pods-MobileRooney.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -689,7 +846,7 @@
 		};
 		B71AEDE4CFFDD7551F3D6F615D531B3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 414BA09158860BA11674F10CFB6AFF20 /* Pods-MobileRooney.release.xcconfig */;
+			baseConfigurationReference = F1F481C34A617F7290ED098D6D103EBF /* Pods-MobileRooney.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -782,6 +939,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		000020DE577587A66CCB77F35499572E /* Build configuration list for PBXNativeTarget "Pods-MobileRooney-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ED3616D9374ECBA0626F41607C61E6E /* Debug */,
+				9528382A9ABA5C232AA206F6717CB53A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -43,6 +43,7 @@
     "react-native-sound": "^0.10.9",
     "react-native-uuid": "^1.4.9",
     "react-navigation": "^1.5.12",
+    "rn-fetch-blob": "^0.10.11",
     "rnpm": "^1.9.0",
     "yarn": "^1.8.0"
   }

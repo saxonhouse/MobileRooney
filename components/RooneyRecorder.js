@@ -16,8 +16,9 @@ export class RooneyRecorderScreen extends Component {
   }
 
   componentDidMount() {
-    if (this.props.navigation.state.token) {
-      this.setstate({token: this.props.navigation.state.token})
+    if (this.props.navigation.state.params.token) {
+      console.warn(this.props.navigation.state.params.token)
+      this.setState({token: this.props.navigation.state.params.token})
     }
   }
 

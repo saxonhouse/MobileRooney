@@ -32,7 +32,8 @@ export class RooneyBoardScreen extends Component {
     this.state = {
       filter : 'all',
       data : [],
-      myRooney: {}
+      myRooney: {},
+      token: {}
     }
     this.renderRooney = this.renderRooney.bind(this);
   }
@@ -60,7 +61,8 @@ export class RooneyBoardScreen extends Component {
 
   componentDidMount() {
     if (this.props.navigation.state.params.token) {
-      this.setState({token: this.props.navigation.state.params.token})
+      this.setState({token: this.props.navigation.state.params.token});
+      console.warn(this.props.navigation.state.params.token);
     }
     if (this.props.navigation.state.params.getRooney) {
       this.getMyRooney();
@@ -75,7 +77,7 @@ export class RooneyBoardScreen extends Component {
       return (
         <View>
           <Text> Your Rooney </Text>
-          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score} token={this.state.token}/>
+          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score} token={this.props.navigation.state.token.aws}/>
         </View>
       );
     }
@@ -86,7 +88,7 @@ export class RooneyBoardScreen extends Component {
       rooney => {
         return(
           <View key={rooney._id} >
-          <Rooney player={rooney.player} audio={rooney.audio} score={rooney.score} token={this.state.token} />
+          <Rooney player={rooney.player} audio={rooney.audio} score={rooney.score} token={this.props.navigation.state.params.token.aws} />
           </View>
         )
       }

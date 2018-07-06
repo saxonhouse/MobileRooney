@@ -19,9 +19,9 @@ export class RooneyRatingScreen extends Component {
     let filename = player + Date.now() + '.aac';
     let data = {
       player: player,
-      score: this.props.navigation.state.params.score,
+      score: this.props.navigation.state.score,
     }
-    Uploader.upload(this.props.navigation.state.file, filename, data).then((response) => {
+    Uploader.upload(this.props.navigation.state.filepath, filename, data).then((response) => {
       console.warn(response);
       this.props.navigation.navigate('RooneyBoard', {getRooney: true, rooney: response.data});
     }).catch((e) => {

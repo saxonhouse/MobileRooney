@@ -36,12 +36,12 @@ export class Player extends Component {
           })
         }, 100)
       }, 100)
-      console.log('duration in seconds: ' + Rooney.getDuration());
-      Rooney.release();
+
     }
 
     var pat = /^https?:\/\//i;
     if (pat.test(this.props.url)) {
+      console.log('raheem tokens' + this.props.token)
     RNFetchBlob
       .config({
         path: RNFetchBlob.fs.dirs.CacheDir + '/voiceMsgReceived.aac',
@@ -54,10 +54,11 @@ export class Player extends Component {
       })
       .then((res) => {
         console.log('The file saved to ', res.path())
+        doSound(res.path());
       })
-      .then((path) => {
-        doSound(path);
-      })
+      }
+      else {
+        doSound(this.props.url);
       }
 
     }
@@ -65,7 +66,7 @@ export class Player extends Component {
   render() {
     return (
       <View>
-        <Button onPress={this.playRooney()} title={"play me"} />
+        <Button onPress={this.playRooney} title={"play me"} />
         <Text> {this.state.error} </Text>
       </View>
     )

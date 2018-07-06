@@ -1,0 +1,6 @@
+framework module Pods_MobileRooney_tvOS {
+  umbrella header "Pods-MobileRooney-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
