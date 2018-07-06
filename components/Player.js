@@ -41,7 +41,6 @@ export class Player extends Component {
 
     var pat = /^https?:\/\//i;
     if (pat.test(this.props.url)) {
-      console.log('raheem tokens' + this.props.token)
     RNFetchBlob
       .config({
         path: RNFetchBlob.fs.dirs.CacheDir + '/voiceMsgReceived.aac',

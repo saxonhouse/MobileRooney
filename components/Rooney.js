@@ -8,7 +8,7 @@ export class Rooney extends Component {
     return (
       <View>
         <Text>{this.props.player}</Text>
-        <Player url={this.props.audio} />
+        <Player url={this.props.audio} token={this.props.token} />
         <Text> {this.props.score} </Text>
       </View>
     )

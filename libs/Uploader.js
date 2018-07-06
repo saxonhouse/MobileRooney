@@ -18,7 +18,7 @@ const Uploader = {
         throw new Error("Failed to upload to S3");
         console.warn('s3 failed');
       }
-      data.audio = response.body.postResponse.location;
+      data.audio = 'https://s3.eu-west-2.amazonaws.com/ratemyrooney/'+filename;
       fetch(apiroot, {
         method: 'POST',
         headers: {
