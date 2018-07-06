@@ -35,4 +35,4 @@ awsAuth(platform,response) {
 
 }
 
-modules.export = {awsAuth}
+module.exports = {awsAuth}
