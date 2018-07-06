@@ -9,20 +9,29 @@ export class RooneyRecorderScreen extends Component {
     this.state = {
       filepath: '',
       score: 0,
+      token: ''
     }
     this.finished = this.finished.bind(this);
     this.loadBoard = this.loadBoard.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.navigation.state.token) {
+      this.setstate({token: this.props.navigation.state.token})
+    }
   }
 
   finished(filepath, volume, time) {
     this.setState({filepath: filepath, score: volume});
     this.props.navigation.navigate('RooneyRating', {
       filepath: this.state.filepath,
-      score: this.state.score});
+      score: this.state.score,
+      token: this.state.token
+    });
   }
 
   loadBoard() {
-    this.props.navigation.navigate('RooneyBoard', {getRooney: false});
+    this.props.navigation.navigate('RooneyBoard', {getRooney: false, token: this.state.token});
   }
 
   render() {

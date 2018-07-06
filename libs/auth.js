@@ -14,7 +14,7 @@ token(platform,response) {
     let login;
     if (platform === 'facebook') {
       login = {
-        'graph.facebook.com': response.authResponse.accessToken
+        'graph.facebook.com': response.response.credentials.accessToken
       }
     }
     if (platform === 'google') {
@@ -38,8 +38,7 @@ token(platform,response) {
       // Obtain AWS credentials
       AWS.config.credentials.get(function(){
           // Access AWS resources here.
-          if(err) reject(err);
-          else resolve(AWS.config.credentials);
+          resolve(AWS.config.credentials.sessionToken);
       });
   });
 }
