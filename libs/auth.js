@@ -21,9 +21,7 @@ awsAuth(platform,response) {
   return new Promise((resolve,reject) => {
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: options.cognitoPoolId,
-      Logins: {
-          loginSettings[platform];
-        }
+      Logins: loginSettings[platform]
       });
 
       // Obtain AWS credentials
