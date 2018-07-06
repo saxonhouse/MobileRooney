@@ -10,13 +10,13 @@ AWS.config.region = 'us-east-1'; // Region
 
 const awsAuth = {
 
-awsLogin(platform,response) {
+token(platform,response) {
   var loginSettings = {
     'facebook' : {
-      'graph.facebook.com': response.authResponse.accessToken
+      'graph.facebook.com': response.response.credentials.accessToken
     },
     'google' : {
-      'accounts.google.com': authResult['id_token']
+      'accounts.google.com': response.authResult['id_token']
     },
     'twitter' : {
       'api.twitter.com' : response.token // CHECK THIS

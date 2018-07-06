@@ -20,13 +20,14 @@ export class LoginScreen extends Component {
   manager.authorize(platform, scopes)
   .then((response) => {
     console.warn(response);
-    this.setState({token: response})
-    awsAuth(platform,response)
+    this.setState({token: response});
+    awsAuth.token(platform,response)
     .then((response) => {
       token = {
         oauth: this.state.token,
         aws: response
       }
+      console.warn(response);
       this.props.navigation.navigate('RooneyRecorder', {token: token});
     }).catch(err => console.warn(err))
     })
