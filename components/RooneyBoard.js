@@ -38,19 +38,7 @@ export class RooneyBoardScreen extends Component {
   }
 
   getMyRooney = () => {
-    let url = apiroot + this.props.navigation.state.params.id;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        }
-      }).then((response) => response.json())
-        .then((responseJson) => {
-        this.setState({myRooney: responseJson})
-      }).catch((error) => {
-        console.warn(error);
-      });
+      this.setState({myRooney: this.props.navigation.state.rooney})
     }
 
 
@@ -63,7 +51,7 @@ export class RooneyBoardScreen extends Component {
         }
       }).then((response) => response.json())
         .then((responseJson) => {
-        this.setState({data: responseJson._items});
+        this.setState({data: responseJson.data});
       }).catch((error) => {
         console.warn(error);
     });

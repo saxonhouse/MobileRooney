@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
 const options = require('../libs/options.js');
-var dbUri = options.dburi;
+var dbUri = options.dbUri;
 import Rooney from './model/rooney.js';
 
 // and create our instances
@@ -49,9 +49,9 @@ router.post('/rooneys', (req, res) => {
   rooney.player = player;
   rooney.audio = audio;
   rooney.score = score;
-  rooney.save(err => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
+  rooney.save((err, rooney) => {
+    if (err) return res.json({ error: err });
+    return res.json({ data: roooney });
   });
 });
 

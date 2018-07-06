@@ -21,7 +21,7 @@ export class Player extends Component {
         }
       // loaded successfully
       Rooney.play(() => {
-        sound.release();
+        Rooney.release();
       });
       console.log('duration in seconds: ' + Rooney.getDuration());
     })
