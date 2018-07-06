@@ -1,11 +1,16 @@
+import OAuthManager from 'react-native-oauth';
 const options = require('./options.js');
+const config = options.config;
+
+const manager = new OAuthManager('ratemyrooney');
+manager.configure(config);
 
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1'; // Region
 
-const Auth = {
+const awsAuth = {
 
-awsAuth(platform,response) {
+awsLogin(platform,response) {
   var loginSettings = {
     'facebook' : {
       'graph.facebook.com': response.authResponse.accessToken
@@ -35,4 +40,4 @@ awsAuth(platform,response) {
 
 }
 
-module.exports = {awsAuth}
+module.exports = {awsAuth, manager}
