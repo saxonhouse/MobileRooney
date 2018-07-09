@@ -19,7 +19,7 @@ export class Player extends Component {
     function doSound(path) {
       // These timeouts are a hacky workaround for some issues with react-native-sound.
       // See https://github.com/zmxv/react-native-sound/issues/89.
-      path = getS3Url(path)
+      path = getS3Url(path);
       setTimeout(() => {
         const Rooney = new Sound(path, null, (error) => {
           if (error) {
