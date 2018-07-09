@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import RNFetchBlob from 'rn-fetch-blob'
+import getS3Url from '../libs/S3Getter.js'
 
 var Sound = require('react-native-sound');
 Sound.setCategory('Playback');
@@ -18,6 +19,7 @@ export class Player extends Component {
     function doSound(path) {
       // These timeouts are a hacky workaround for some issues with react-native-sound.
       // See https://github.com/zmxv/react-native-sound/issues/89.
+      path = getS3Url(path)
       setTimeout(() => {
         const Rooney = new Sound(path, null, (error) => {
           if (error) {
@@ -38,7 +40,7 @@ export class Player extends Component {
       }, 100)
 
     }
-    
+
     doSound(this.props.url);
 
     }
