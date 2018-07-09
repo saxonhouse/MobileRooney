@@ -18,7 +18,7 @@ const Uploader = {
         throw new Error("Failed to upload to S3");
         console.warn('s3 failed');
       }
-      data.audio = 'https://s3.eu-west-2.amazonaws.com/ratemyrooney/'+filename;
+      data.audio = 'https://s3.eu-west-2.amazonaws.com/ratemyrooney/' + filename;
       fetch(apiroot, {
         method: 'POST',
         headers: {
@@ -28,6 +28,7 @@ const Uploader = {
       }).then((response) => response.json())
         .then((response) => {
         resolve(response);
+        console.log(response);
       }).catch((error) => {
         reject(error);
         console.warn(error);

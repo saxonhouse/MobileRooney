@@ -40,26 +40,16 @@ export class Player extends Component {
     }
 
     var pat = /^https?:\/\//i;
+    let path;
     if (pat.test(this.props.url)) {
-    RNFetchBlob
-      .config({
-        path: RNFetchBlob.fs.dirs.CacheDir + '/voiceMsgReceived.aac',
-        fileCache: true,
-        appendExt: 'aac',
-      })
-      .fetch('GET', this.props.url, {
-        // your custom headers here
-        'x-amz-security-token': this.props.token
-      })
-      .then((res) => {
-        console.log('The file saved to ', res.path())
-        doSound(res.path());
-      })
+      path = this.props.url + '?x-amz-security-token=' + this.props.token;
       }
-      else {
-        doSound(this.props.url);
-      }
+    else {
+    path = this.props.url;
+    }
 
+    doSound(path);
+    
     }
 
   render() {

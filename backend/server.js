@@ -43,7 +43,8 @@ router.post('/rooneys', (req, res) => {
     // we should throw an error. we can do this check on the front end
     return res.json({
       success: false,
-      error: 'You must provide player, audio and score'
+      error: 'You must provide player, audio and score',
+      body: req.body
     });
   }
   rooney.player = player;
@@ -51,7 +52,7 @@ router.post('/rooneys', (req, res) => {
   rooney.score = score;
   rooney.save((err, rooney) => {
     if (err) return res.json({ error: err });
-    return res.json({ data: roooney });
+    return res.json({ data: rooney });
   });
 });
 

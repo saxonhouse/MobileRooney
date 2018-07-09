@@ -9,7 +9,7 @@ export class RooneyRecorderScreen extends Component {
     this.state = {
       filepath: '',
       score: 0,
-      token: ''
+      token: {}
     }
     this.finished = this.finished.bind(this);
     this.loadBoard = this.loadBoard.bind(this);
