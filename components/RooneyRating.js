@@ -28,6 +28,7 @@ export class RooneyRatingScreen extends Component {
     let data = {
       player: player,
       score: this.props.navigation.state.params.score,
+      filename: filename
     }
     Uploader.upload(this.props.navigation.state.params.filepath, filename, data).then((response) => {
       console.warn(response);

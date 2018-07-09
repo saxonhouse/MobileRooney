@@ -38,18 +38,9 @@ export class Player extends Component {
       }, 100)
 
     }
-
-    var pat = /^https?:\/\//i;
-    let path;
-    if (pat.test(this.props.url)) {
-      path = this.props.url + '?x-amz-security-token=' + this.props.token;
-      }
-    else {
-    path = this.props.url;
-    }
-
-    doSound(path);
     
+    doSound(this.props.url);
+
     }
 
   render() {

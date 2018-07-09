@@ -38,18 +38,19 @@ router.get('/rooneys', (req, res) => {
 router.post('/rooneys', (req, res) => {
   const rooney = new Rooney();
   // body parser lets us use the req.body
-  const { player, audio, score } = req.body;
-  if (!player || !audio || !score) {
+  const { player, audio, score, filename } = req.body;
+  if (!player || !audio || !score || !filename) {
     // we should throw an error. we can do this check on the front end
     return res.json({
       success: false,
-      error: 'You must provide player, audio and score',
+      error: 'You must provide player, audio and score - and filename buddy!',
       body: req.body
     });
   }
   rooney.player = player;
   rooney.audio = audio;
   rooney.score = score;
+  rooney.filename = filename;
   rooney.save((err, rooney) => {
     if (err) return res.json({ error: err });
     return res.json({ data: rooney });

@@ -3,8 +3,12 @@ import { View, Text } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Player}  from './Player';
 import { Rooney } from './Rooney';
+import getS3Url from '../libs/S3Getter.js'
+
 const options = require('../libs/options.js');
 var apiroot = options.apiroot;
+
+
 let testdata = [
   {
     _id: 'example1',
@@ -77,7 +81,7 @@ export class RooneyBoardScreen extends Component {
       return (
         <View>
           <Text> Your Rooney </Text>
-          <Rooney player={myRooney.player} audio={myRooney.audio} score={myRooney.score} token={this.state.token.aws}/>
+          <Rooney player={myRooney.player} audio={getS3Url(myRooney.filename)} score={myRooney.score} token={this.state.token.aws}/>
         </View>
       );
     }
@@ -88,7 +92,7 @@ export class RooneyBoardScreen extends Component {
       rooney => {
         return(
           <View key={rooney._id} >
-          <Rooney player={rooney.player} audio={rooney.audio} score={rooney.score} token={this.state.token.aws} />
+          <Rooney player={rooney.player} audio={getS3Url(rooney.filename)} score={rooney.score} token={this.state.token.aws} />
           </View>
         )
       }

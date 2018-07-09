@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const RooneySchema = new Schema({
   player: String,
   audio: String,
+  filename: String,
   score: Number,
 }, { timestamps: true });
 
