@@ -8,28 +8,6 @@ import getS3Url from '../libs/S3Getter.js'
 const options = require('../libs/options.js');
 var apiroot = options.apiroot;
 
-
-let testdata = [
-  {
-    _id: 'example1',
-    player: 'tjh',
-    score: 4.5,
-    audio: 'http://audio.com/audio1.mp3'
-  },
-  {
-    _id: 'example2',
-    player: 'ttt',
-    score: 3.5,
-    audio: 'http://audio.com/audio1.mp3'
-  },
-  {
-    _id: 'example3',
-    player: 'tom',
-    score: 2.5,
-    audio: 'http://audio.com/audio1.mp3'
-  },
-]
-
 export class RooneyBoardScreen extends Component {
   constructor(props){
     super(props);

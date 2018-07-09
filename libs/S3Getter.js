@@ -10,7 +10,7 @@ const s3 = new AWS.S3({
   }
 });
 
-export function getS3Url(file) {
+function getS3Url(file) {
   const params = {
     Bucket: s3options.bucket,
     Key: file,
@@ -20,3 +20,5 @@ export function getS3Url(file) {
   console.log("generated url: ", url);
   return url;
 }
+
+export default getS3Url;
