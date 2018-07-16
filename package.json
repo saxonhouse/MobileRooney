@@ -29,6 +29,8 @@
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
     "express": "^4.16.3",
+    "is-url": "^1.2.4",
+    "isurl": "^1.0.0",
     "mongoose": "^5.2.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.5",

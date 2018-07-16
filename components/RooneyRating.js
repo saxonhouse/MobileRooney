@@ -50,7 +50,7 @@ export class RooneyRatingScreen extends Component {
     return (
       <View>
         <Text>  your Rooney score is {params.score} </Text>
-        <Player url={params.filepath} />
+        <Player url={params.filepath} local={true} />
         <Text> Enter your initials to submit your Rooney to the Rooneyboard</Text>
         <RooneyForm onRooneySubmit={this.submit} />
         <Button onPress={this.discard} title={"Discard"} />

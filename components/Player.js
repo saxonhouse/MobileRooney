@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
-import RNFetchBlob from 'rn-fetch-blob'
+import { View, Text, Button } from 'react-native'
 import getS3Url from '../libs/S3Getter.js'
 
 var Sound = require('react-native-sound');
@@ -19,7 +18,6 @@ export class Player extends Component {
     function doSound(path) {
       // These timeouts are a hacky workaround for some issues with react-native-sound.
       // See https://github.com/zmxv/react-native-sound/issues/89.
-      path = getS3Url(path);
       setTimeout(() => {
         const Rooney = new Sound(path, null, (error) => {
           if (error) {
@@ -27,22 +25,30 @@ export class Player extends Component {
             return;
           }
         })
+
           // loaded successfully
-          setTimeout(() => {
+        setTimeout(() => {
           Rooney.play((success) => {
             if (success) {
-              console.log('successfully finished playing')
+              console.warn('successfully finished playing')
+              Rooney.release();
             } else {
-              console.log('playback failed due to audio decoding errors')
+              console.warn('playback failed due to audio decoding errors')
+              Rooney.reset();
             }
           })
-        }, 100)
-      }, 100)
-
+        }, 100);
+      }, 100);
     }
 
-    doSound(this.props.url);
-
+    if (this.props.local) {
+      doSound(this.props.url);
+    }
+    else {
+      getS3Url(this.props.url).then((path) => {
+        doSound(path);
+      }).catch((err) => console.warn('an error'));
+    }
     }
 
   render() {

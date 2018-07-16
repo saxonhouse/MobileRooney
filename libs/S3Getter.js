@@ -11,14 +11,18 @@ const s3 = new AWS.S3({
 });
 
 function getS3Url(file) {
-  const params = {
+  return new Promise((reject,resolve) => {
+    const params = {
     Bucket: s3options.bucket,
     Key: file,
     Expires: 60
-  };
-  const url = s3.getSignedUrl("getObject", params);
-  console.log("generated url: ", url);
-  return url;
+    };
+    const url = s3.getSignedUrl("getObject", params, (url, err) => {
+      if (err) reject(err);
+      else resolve(url);
+    });
+  });
+
 }
 
 export default getS3Url;
