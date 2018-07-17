@@ -7,10 +7,20 @@ export class UserBar extends Component {
   }
 
   render() {
+    const { user } = this.props;
+    if (!user.picture) {
+      user.picture = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
+    }
+    if (!user.name) {
+      user.name = 'User';
+    }
     return(
       <View>
-        <Image source={{uri: this.props.user.picture}} />
-        <Text> {this.props.user.name} </Text>
+        <Image
+           style={{width: 50, height: 50}}
+           source={{uri: user.picture}}
+        />
+        <Text> {user.name} </Text>
       </View>
     )
   }

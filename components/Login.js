@@ -9,7 +9,7 @@ export class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      token: {},
+      token: '',
       user: {},
       error: ''
     }
@@ -21,18 +21,15 @@ export class LoginScreen extends Component {
   manager.deauthorize(platform);
   manager.authorize(platform, scopes)
   .then((response) => {
-    console.warn(response);
-    this.setState({token: response.token});
     let platformUrl = authGetter.setUrl(platform);
     manager.makeRequest(platform, platformUrl)
     .then(resp => {
     console.warn('Data ->', resp.data);
     let profile = authGetter.getProfile(platform, resp.data);
-    console.warn(profile);
     this.setState({user: profile});
+    this.props.navigation.navigate('RooneyRecorder', {user: this.state.user});
     })
-    .catch(error => console.warn(error.error));
-    this.props.navigation.navigate('RooneyRecorder', {token: this.state.token, user: this.state.user});
+    .catch(err => console.warn(err));
     })
     .catch(err => console.warn(err))
   }

@@ -66,14 +66,28 @@ getProfile(platform, data) {
   if (platform === 'facebook') {
     profile.id = data.id;
     profile.name = data.name;
-    profile.picture = 'http://graph.facebook.com/'+data.id+'/picture?type=square'
+    profile.picture = 'https://graph.facebook.com/'+data.id+'/picture?type=square'
+    /* fetch(url, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => response.json())
+    .then((responseJson) => {
+      console.warn(responseJson.data)
+      profile.picture = responseJson.data.url;
+    })
+    .catch((error) => {
+      profile.picture = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png';
+    }); */
   }
-  if (platform === 'twitter') {
+  else if (platform === 'twitter') {
     profile.id = data.user.id_str;
     profile.name = data.user.name;
     profile.picture = data.user.profile_image_url;
   }
-  if (platform === 'google') {
+  else if (platform === 'google') {
     profile.id = data.id;
     profile.name = data.displayName;
     profile.picture = data.image.url;
