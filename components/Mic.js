@@ -128,7 +128,7 @@ export class Mic extends Component {
         c += 1
         vt += this.state.volume;
         this.setState({ volumeAverage: vt/c });
-      }, 200);
+      }, 100);
     }
 
     async _stop() {
@@ -161,7 +161,7 @@ export class Mic extends Component {
         <RooneyHead scale={this.state.scale} />
         {this._renderButton("RECORD", () => {this._record()}, () => {this._stop()} )}
         <Text> {this.state.currentTime} </Text>
-        <Text> {this.state.scale} </Text>
+        <Text> {this.state.volumeAverage} </Text>
         <Text> {this.state.error} </Text>
       </View>
     )

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { Mic } from './Mic';
 import { StackNavigator } from 'react-navigation';
+import rooneyRater from '../libs/rooneyrater';
 
 export class RooneyRecorderScreen extends Component {
   constructor(props) {
@@ -30,7 +31,8 @@ export class RooneyRecorderScreen extends Component {
   }
 
   finished(filepath, volume, time) {
-    this.setState({filepath: filepath, score: volume});
+    let score = rooneyRater(volume, time);
+    this.setState({filepath: filepath, score: score});
     this.props.navigation.navigate('RooneyRating', {
       filepath: this.state.filepath,
       score: this.state.score,

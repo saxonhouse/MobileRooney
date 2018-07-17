@@ -35,7 +35,6 @@ export class RooneyHead extends Component {
       }}
       resizeMode = 'contain'
       alt = 'Wayne Rooney' />
-      <Text>{this.rooneyAnim._value}</Text>
       </View>
     )
   }
