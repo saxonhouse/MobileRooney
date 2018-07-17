@@ -17,8 +17,14 @@ export class RooneyRecorderScreen extends Component {
 
   componentDidMount() {
     if (this.props.navigation.state.params.token) {
-      console.warn(this.props.navigation.state.params.token)
-      this.setState({token: this.props.navigation.state.params.token})
+      this.setState({
+        token: this.props.navigation.state.params.token,
+      })
+    }
+    if (this.props.navigation.state.params.user) {
+      this.setState({
+        user: this.props.navigation.state.params.user
+      })
     }
   }
 
@@ -27,12 +33,13 @@ export class RooneyRecorderScreen extends Component {
     this.props.navigation.navigate('RooneyRating', {
       filepath: this.state.filepath,
       score: this.state.score,
-      token: this.state.token
+      token: this.state.token,
+      user: this.state.user
     });
   }
 
   loadBoard() {
-    this.props.navigation.navigate('RooneyBoard', {getRooney: false, token: this.state.token});
+    this.props.navigation.navigate('RooneyBoard', {getRooney: false, token: this.state.token, user: this.state.user});
   }
 
   render() {

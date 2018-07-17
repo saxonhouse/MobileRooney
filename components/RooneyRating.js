@@ -18,8 +18,14 @@ export class RooneyRatingScreen extends Component {
 
   componentDidMount() {
     if (this.props.navigation.state.params.token) {
-      console.warn(this.props.navigation.state.params.token)
-      this.setState({token: this.props.navigation.state.params.token})
+      this.setState({
+        token: this.props.navigation.state.params.token,
+      })
+    }
+    if (this.props.navigation.state.params.user) {
+      this.setState({
+        user: this.props.navigation.state.params.user
+      })
     }
   }
 
@@ -31,8 +37,12 @@ export class RooneyRatingScreen extends Component {
       filename: filename
     }
     Uploader.upload(this.props.navigation.state.params.filepath, filename, data).then((response) => {
-      console.warn(response);
-      this.props.navigation.navigate('RooneyBoard', {getRooney: true, rooney: response.data})
+      this.props.navigation.navigate('RooneyBoard', {
+        getRooney: true,
+        rooney: response.data,
+        token: this.state.token,
+        user: this.state.user
+      })
     }).catch((e) => {
       this.setState({error: e.message});
       console.warn(e);
@@ -42,7 +52,10 @@ export class RooneyRatingScreen extends Component {
   }
 
   discard() {
-    this.props.navigation.navigate('RooneyRecorder', {token: this.state.token});
+    this.props.navigation.navigate('RooneyRecorder', {
+      token: this.state.token,
+      user: this.state.user
+    });
   }
 
   render() {

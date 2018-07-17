@@ -3,13 +3,15 @@ import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 const Auth = require('../libs/auth.js');
 const manager = Auth.manager;
-const awsAuth = Auth.awsAuth;
+const authGetter = Auth.authGetter;
 
 export class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      token: {}
+      token: {},
+      user: {},
+      error: ''
     }
     this.login = this.login.bind(this);
     this.loadBoard = this.loadBoard.bind(this);
@@ -20,16 +22,15 @@ export class LoginScreen extends Component {
   manager.authorize(platform, scopes)
   .then((response) => {
     console.warn(response);
-    this.setState({token: response});
-    awsAuth.token(platform,response)
-    .then((response) => {
-      token = {
-        oauth: this.state.token,
-        aws: response
-      }
-      console.warn(response);
-      this.props.navigation.navigate('RooneyRecorder', {token: token});
-    }).catch(err => console.warn(err))
+    this.setState({token: response.token});
+    let platformUrl = authGetter.setUrl(platform);
+    manager.makeRequest(platform, platformUrl)
+    .then(resp => {
+    console.warn('Data ->', resp.data);
+    this.setState({user: resp});
+    })
+    .catch(error => console.warn(error.error));
+    this.props.navigation.navigate('RooneyRecorder', {token: this.state.token, user: this.state.user});
     })
     .catch(err => console.warn(err))
   }
@@ -48,6 +49,7 @@ export class LoginScreen extends Component {
         <Text> Login with Google</Text>
         <Button onPress={() => this.login('google', {scopes: 'profile'})} title={'Login'} />
         <Button onPress={this.loadBoard} title={"RooneyBoard"} />
+        <Text> {this.state.error} </Text>
       </View>
     )
   }

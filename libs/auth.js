@@ -8,31 +8,49 @@ manager.configure(config);
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1'; // Region
 
-const awsAuth = {
+const authGetter = {
+
+setLogin(platform, response) {
+  let login;
+  if (platform === 'facebook') {
+    login = {
+      'graph.facebook.com': response.response.credentials.accessToken
+    }
+  }
+  if (platform === 'google') {
+    login = {
+      'accounts.google.com': authResult['id_token']
+    }
+  }
+  if (platform === 'twitter') {
+    login = {
+    'api.twitter.com' : response.token // CHECK THIS
+    }
+  }
+  return login;
+},
+
+setUrl(platform) {
+  let profileUrl;
+  if (platform === 'facebook') {
+    profileUrl = '/me';
+  }
+  if (platform === 'google') {
+    profileUrl = 'https://www.googleapis.com/plus/v1/people/me';
+  }
+  if (platform === 'twitter') {
+    profileUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+  }
+  return profileUrl;
+},
 
 token(platform,response) {
-    let login;
-    if (platform === 'facebook') {
-      login = {
-        'graph.facebook.com': response.response.credentials.accessToken
-      }
-    }
-    if (platform === 'google') {
-      login = {
-        'accounts.google.com': authResult['id_token']
-      }
-    }
-    if (platform === 'twitter') {
-      login = {
-      'api.twitter.com' : response.token // CHECK THIS
-      }
-    }
-
+  platformOptions = setLogin(platform, response);
 
   return new Promise((resolve,reject) => {
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: options.cognitoPoolId,
-      Logins: login
+      Logins: platformOptions.login
       });
 
       // Obtain AWS credentials
@@ -41,8 +59,8 @@ token(platform,response) {
           resolve(AWS.config.credentials.sessionToken);
       });
   });
-}
+},
 
 }
 
-module.exports = {awsAuth, manager}
+module.exports = {manager, authGetter}

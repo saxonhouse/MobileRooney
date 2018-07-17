@@ -42,13 +42,18 @@ export class RooneyBoardScreen extends Component {
 
   componentDidMount() {
     if (this.props.navigation.state.params.token) {
-      this.setState({token: this.props.navigation.state.params.token});
-      console.warn(this.props.navigation.state.params.token);
+      this.setState({
+        token: this.props.navigation.state.params.token,
+      })
+    }
+    if (this.props.navigation.state.params.user) {
+      this.setState({
+        user: this.props.navigation.state.params.user
+      })
     }
     if (this.props.navigation.state.params.getRooney) {
       this.getMyRooney();
     }
-
     this.getRooneys();
   }
 
