@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { Mic } from './Mic';
+import { UserBar } from './UserBar';
 import { StackNavigator } from 'react-navigation';
 import rooneyRater from '../libs/rooneyrater';
 
@@ -48,6 +49,7 @@ export class RooneyRecorderScreen extends Component {
   render() {
     return (
       <View>
+        <UserBar user={this.state.user} />
         <Mic finished={this.finished} />
         <Button onPress={this.loadBoard} title={"RooneyBoard"} />
       </View>
