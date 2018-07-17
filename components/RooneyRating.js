@@ -10,7 +10,8 @@ export class RooneyRatingScreen extends Component {
     super(props);
     this.state = {
       error: '',
-      token: {}
+      token: {},
+      user: {}
     }
     this.submit = this.submit.bind(this);
     this.discard = this.discard.bind(this);

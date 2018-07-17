@@ -14,7 +14,8 @@ export class RooneyBoardScreen extends Component {
       filter : 'all',
       data : [],
       myRooney: {},
-      token: {}
+      token: {},
+      user: {}
     }
     this.renderRooney = this.renderRooney.bind(this);
   }
