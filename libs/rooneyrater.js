@@ -12,10 +12,10 @@ function rooneyRater(volume, length) {
     }
 
     function lengthScale(length) {
-      if (length > 13) {
-      length = 13
+      if (length > 10) {
+      length = 10
       }
-      length /= 2.6
+      length /= 2
       return length;
     }
 
