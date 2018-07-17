@@ -27,7 +27,9 @@ export class LoginScreen extends Component {
     manager.makeRequest(platform, platformUrl)
     .then(resp => {
     console.warn('Data ->', resp.data);
-    this.setState({user: resp});
+    let profile = authGetter.getProfile(platform, resp.data);
+    console.warn(profile);
+    this.setState({user: profile});
     })
     .catch(error => console.warn(error.error));
     this.props.navigation.navigate('RooneyRecorder', {token: this.state.token, user: this.state.user});

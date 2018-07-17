@@ -61,6 +61,26 @@ token(platform,response) {
   });
 },
 
+getProfile(platform, data) {
+  let profile = {};
+  if (platform === 'facebook') {
+    profile.id = data.id;
+    profile.name = data.name;
+    profile.picture = 'http://graph.facebook.com/'+data.id+'/picture?type=square'
+  }
+  if (platform === 'twitter') {
+    profile.id = data.user.id_str;
+    profile.name = data.user.name;
+    profile.picture = data.user.profile_image_url;
+  }
+  if (platform === 'google') {
+    profile.id = data.id;
+    profile.name = data.displayName;
+    profile.picture = data.image.url;
+  }
+  return profile;
+}
+
 }
 
 module.exports = {manager, authGetter}
