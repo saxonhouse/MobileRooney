@@ -38,8 +38,8 @@ router.get('/rooneys', (req, res) => {
 router.post('/rooneys', (req, res) => {
   const rooney = new Rooney();
   // body parser lets us use the req.body
-  const { player, audio, score, filename } = req.body;
-  if (!player || !audio || !score || !filename) {
+  const { user, audio, score, filename } = req.body;
+  if (!user || !audio || !score || !filename) {
     // we should throw an error. we can do this check on the front end
     return res.json({
       success: false,
@@ -47,7 +47,7 @@ router.post('/rooneys', (req, res) => {
       body: req.body
     });
   }
-  rooney.player = player;
+  rooney.user = user;
   rooney.audio = audio;
   rooney.score = score;
   rooney.filename = filename;

@@ -16,7 +16,7 @@ const Uploader = {
     RNS3.put(s3File, s3options).then(response => {
       if (response.status !== 201) {
         throw new Error("Failed to upload to S3");
-        console.warn('s3 failed');
+        console.log('s3 failed');
       }
       data.audio = 'https://s3.eu-west-2.amazonaws.com/ratemyrooney/' + filename;
       fetch(apiroot, {
@@ -31,8 +31,6 @@ const Uploader = {
         console.log(response);
       }).catch((error) => {
         reject(error);
-        console.warn(error);
-        console.log('buggywug ' + error)
       });
     });
 

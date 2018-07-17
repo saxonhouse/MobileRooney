@@ -83,9 +83,9 @@ getProfile(platform, data) {
     }); */
   }
   else if (platform === 'twitter') {
-    profile.id = data.user.id_str;
-    profile.name = data.user.name;
-    profile.picture = data.user.profile_image_url;
+    profile.id = data[0].user.id_str;
+    profile.name = data[0].user.name;
+    profile.picture = data[0].user.profile_image_url.replace(/^http:\/\//i, 'https://');;
   }
   else if (platform === 'google') {
     profile.id = data.id;

@@ -59,12 +59,12 @@ export class RooneyBoardScreen extends Component {
   }
 
   renderRooney() {
-    if (this.props.navigation.state.params.getRooney) {
-      let myRooney = this.state.myRooney;
+    if (this.props.navigation.state.params.rooney) {
+      let myRooney = this.props.navigation.state.params.rooney;
       return (
         <View>
           <Text> Your Rooney </Text>
-          <Rooney player={myRooney.player} audio={myRooney.filename} score={myRooney.score} token={this.state.token.aws}/>
+          <Rooney user={myRooney.user} audio={myRooney.filename} score={myRooney.score} token={this.state.token.aws}/>
         </View>
       );
     }
@@ -75,7 +75,7 @@ export class RooneyBoardScreen extends Component {
       rooney => {
         return(
           <View key={rooney._id} >
-          <Rooney player={rooney.player} audio={rooney.filename} score={rooney.score} token={this.state.token.aws} />
+          <Rooney user={rooney.user} audio={rooney.filename} score={rooney.score} token={this.state.token.aws} />
           </View>
         )
       }
