@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image } from 'react-native';
 import { Player } from './Player';
+import { Avatar, ListItem } from 'react-native-elements'
 
 
 export class Rooney extends Component {
@@ -14,12 +15,15 @@ export class Rooney extends Component {
     }
     return (
       <View>
-        <Image
-          style={{width: 50, height: 50}}
-          source={{uri: user.picture}} />
-        <Text>{user.name}</Text>
-        <Player url={this.props.audio} />
-        <Text> {this.props.score} </Text>
+      <ListItem
+        roundavatar
+        avatar={{uri: user.picture}}
+        title={user.name}
+        subtitle={this.props.score}
+        rightIcon={
+          <Player url={this.props.audio} />
+        }
+      />
       </View>
     )
   }

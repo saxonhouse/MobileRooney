@@ -6,6 +6,8 @@ target 'MobileRooney' do
   # use_frameworks!
 
   # Pods for MobileRooney
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end
 
 target 'MobileRooney-tvOS' do

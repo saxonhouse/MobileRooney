@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { SocialIcon } from 'react-native-elements'
 const Auth = require('../libs/auth.js');
 const manager = Auth.manager;
 const authGetter = Auth.authGetter;
@@ -11,13 +12,15 @@ export class LoginScreen extends Component {
     this.state = {
       token: '',
       user: {},
-      error: ''
+      error: '',
+      loading: false
     }
     this.login = this.login.bind(this);
     this.loadBoard = this.loadBoard.bind(this);
   }
 
   login(platform, scopes) {
+  this.setState({loading: true});
   manager.deauthorize(platform);
   manager.authorize(platform, scopes)
   .then((response) => {
@@ -26,12 +29,12 @@ export class LoginScreen extends Component {
     .then(resp => {
     console.warn('Data ->', resp.data);
     let profile = authGetter.getProfile(platform, resp.data);
-    this.setState({user: profile});
+    this.setState({user: profile, loading: false});
     this.props.navigation.navigate('RooneyRecorder', {user: this.state.user});
     })
-    .catch(err => console.warn(err));
+    .catch(err => this.setState({error: err}))
     })
-    .catch(err => console.warn(err))
+    .catch(err => this.setState({error: err}))
   }
 
   loadBoard() {
@@ -41,13 +44,23 @@ export class LoginScreen extends Component {
   render() {
     return(
       <View>
-        <Text> Login with Twitter </Text>
-        <Button onPress={() => this.login('twitter', {scopes: 'profile'})} title={'Login'} />
-        <Text> Login with Facebook </Text>
-        <Button onPress={() => this.login('facebook')} title={'Login'} />
-        <Text> Login with Google</Text>
-        <Button onPress={() => this.login('google', {scopes: 'profile'})} title={'Login'} />
-        <Button onPress={this.loadBoard} title={"RooneyBoard"} />
+        <Text> Login: </Text>
+        <SocialIcon
+          type={'twitter'}
+          onPress={() => this.login('twitter', {scopes: 'profile'})}
+          disabled = {this.state.loading}
+        />
+        <SocialIcon
+          type={'facebook'}
+          onPress={() => this.login('facebook')}
+          disabled = {this.state.loading}
+        />
+        <SocialIcon
+          type={'google'}
+          onPress={() => this.login('google', {scopes: 'profile'})}
+          disabled = {this.state.loading}
+          iconColor = {'red'}
+        />
         <Text> {this.state.error} </Text>
       </View>
     )

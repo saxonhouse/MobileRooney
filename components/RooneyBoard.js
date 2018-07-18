@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Player}  from './Player';
 import { Rooney } from './Rooney';
+import { Card, List, Button } from 'react-native-elements'
 
 const options = require('../libs/options.js');
 var apiroot = options.apiroot;
@@ -69,8 +70,9 @@ export class RooneyBoardScreen extends Component {
       );
     }
   }
-
   render() {
+
+
     let leadingRooneys = this.state.data.map(
       rooney => {
         return(
@@ -85,8 +87,17 @@ export class RooneyBoardScreen extends Component {
       <View>
         <Text> The Rooney Board </Text>
         {this.renderRooney()}
-        <Text> All Time Best Rooneys </Text>
-        { leadingRooneys }
+        <List>
+          <FlatList
+            data={this.state.data}
+            renderItem={({item}) => (
+              <View>
+              <Rooney user={item.user} score={item.score} audio={item.filename} />
+              </View>
+            )}
+            keyExtractor={item => item._id}
+          />
+        </List>
       </View>
     )
   }
