@@ -16,7 +16,7 @@ export class Rooney extends Component {
     return (
       <View>
       <ListItem
-        roundavatar
+        roundAvatar
         avatar={{uri: user.picture}}
         title={user.name}
         subtitle={this.props.score}
