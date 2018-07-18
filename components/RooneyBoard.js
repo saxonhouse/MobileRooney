@@ -36,9 +36,7 @@ export class RooneyBoardScreen extends Component {
       }).then((response) => response.json())
         .then((responseJson) => {
         this.setState({data: responseJson.data});
-      }).catch((error) => {
-        console.warn(error);
-    });
+      }).catch((error) => this.setState(error: error));
   }
 
 

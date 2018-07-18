@@ -43,24 +43,32 @@ export class LoginScreen extends Component {
 
   render() {
     return(
-      <View>
+      <View style= {{
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+      }}>
         <Text> Login: </Text>
-        <SocialIcon
-          type={'twitter'}
-          onPress={() => this.login('twitter', {scopes: 'profile'})}
-          disabled = {this.state.loading}
-        />
-        <SocialIcon
-          type={'facebook'}
-          onPress={() => this.login('facebook')}
-          disabled = {this.state.loading}
-        />
-        <SocialIcon
-          type={'google'}
-          onPress={() => this.login('google', {scopes: 'profile'})}
-          disabled = {this.state.loading}
-          iconColor = {'red'}
-        />
+        <View style={{
+          flexDirection: 'row',
+        }}>
+          <SocialIcon
+            type={'twitter'}
+            onPress={() => this.login('twitter', {scopes: 'profile'})}
+            disabled = {this.state.loading}
+          />
+          <SocialIcon
+            type={'facebook'}
+            onPress={() => this.login('facebook')}
+            disabled = {this.state.loading}
+          />
+          <SocialIcon
+            type={'google'}
+            onPress={() => this.login('google', {scopes: 'profile'})}
+            disabled = {this.state.loading}
+            iconColor = {'red'}
+          />
+        </View>
         <Text> {this.state.error} </Text>
       </View>
     )

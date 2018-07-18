@@ -28,7 +28,6 @@ export class RooneyRecorderScreen extends Component {
       this.setState({
         user: this.props.navigation.state.params.user,
       })
-      console.warn(this.props);
     }
   }
 

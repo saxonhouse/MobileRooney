@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { View, Image, Text} from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 export class UserBar extends Component {
   constructor(props) {
@@ -16,9 +17,10 @@ export class UserBar extends Component {
     }
     return(
       <View>
-        <Image
-           style={{width: 50, height: 50}}
-           source={{uri: user.picture}}
+        <Avatar
+          small
+          rounded
+          source={{uri: user.picture}}
         />
         <Text> {user.name} </Text>
       </View>

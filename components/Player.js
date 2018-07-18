@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native'
-import getS3Url from '../libs/S3Getter.js'
+import { View, Text, Button } from 'react-native';
+import { Icon } from 'react-native-elements';
+import getS3Url from '../libs/S3Getter.js';
 
 var Sound = require('react-native-sound');
 Sound.setCategory('Playback');
@@ -54,7 +55,7 @@ export class Player extends Component {
   render() {
     return (
       <View>
-        <Button onPress={this.playRooney} title={"play me"} />
+        <Icon name='play-arrow' onPress={this.playRooney} title={"play me"} />
         <Text> {this.state.error} </Text>
       </View>
     )

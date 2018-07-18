@@ -33,7 +33,7 @@
     "isurl": "^1.0.0",
     "mongoose": "^5.2.1",
     "morgan": "^1.9.0",
-    "nodemon": "^1.17.5",
+    "nodemon": "^1.18.3",
     "npm": "^6.1.0",
     "react": "16.3.0",
     "react-devtools": "^3.2.3",
