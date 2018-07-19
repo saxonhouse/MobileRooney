@@ -22,6 +22,7 @@ function rooneyRater(volume, length) {
     let volumeFive = volumeScale(volume);
     let lengthFive = lengthScale(length);
     let score = (volumeFive + lengthFive) / 2
+    score = Math.round(score * 100) / 100;
     return score;
 }
 

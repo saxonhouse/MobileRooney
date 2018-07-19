@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
+import { Icon } from 'react-native-elements';
 import { RooneyHead } from './RooneyHead';
 var uuid = require('react-native-uuid');
 let audioPath = AudioUtils.DocumentDirectoryPath + '/' + uuid.v1() +'.aac';
@@ -89,11 +90,11 @@ export class Mic extends Component {
 
       return (
         <TouchableWithoutFeedback onPressIn={onPressIn} onPressOut={onPressOut}>
-          <View>
-          <Text>
-            {title}
-          </Text>
-          </View>
+          <Icon
+            name="record-rec"
+            type="material-community"
+            color="red"
+            size=30 />
         </TouchableWithoutFeedback>
       );
     }
@@ -157,11 +158,13 @@ export class Mic extends Component {
 
     render() {
     return (
-      <View>
+      <View style= {{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
         <RooneyHead scale={this.state.scale} />
         {this._renderButton("RECORD", () => {this._record()}, () => {this._stop()} )}
-        <Text> {this.state.currentTime} </Text>
-        <Text> {this.state.volumeAverage} </Text>
         <Text> {this.state.error} </Text>
       </View>
     )

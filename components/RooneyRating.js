@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Player } from './Player';
-import { View, Text, Button } from 'react-native';
+import { View, Text } from 'react-native';
+import { Button } from 'react-native-elements';
 import { RooneyForm } from './RooneyForm';
 import { StackNavigator } from 'react-navigation';
 import { UserBar } from './UserBar';
@@ -64,12 +65,15 @@ export class RooneyRatingScreen extends Component {
 
   render() {
     const { params } = this.props.navigation.state;
+    const message1 = 'Oof! Wayne\'s looking pleased...'
+    const message2 = 'Pft, Wayne\'s barely heard it...'
     return (
       <View>
         <UserBar user={this.state.user} />
-        <Text>  your Rooney score is {params.score} </Text>
+        <Text>  {params.score > 2.5 ? message1 : message2 } </Text>
+        <Text> {params.score} </Text>
         <Player url={params.filepath} local={true} />
-        <Text> Enter your initials to submit your Rooney to the Rooneyboard</Text>
+        <Text> Submit to the Rooneyboard below! </Text>
         <Button onPress={this.submit} title={"Submit"} />
         <Button onPress={this.discard} title={"Discard"} />
         <Text> {this.state.error} </Text>
