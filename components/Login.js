@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { SocialIcon } from 'react-native-elements'
+import styles from '../libs/styles';
 const Auth = require('../libs/auth.js');
 const manager = Auth.manager;
 const authGetter = Auth.authGetter;
@@ -42,11 +43,7 @@ export class LoginScreen extends Component {
 
   render() {
     return(
-      <View style= {{
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center'
-      }}>
+      <View style= {styles.login}>
         <Text> Login: </Text>
         <View style={{
           flexDirection: 'row',

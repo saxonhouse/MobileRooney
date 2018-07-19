@@ -94,7 +94,7 @@ export class Mic extends Component {
             name="record-rec"
             type="material-community"
             color="red"
-            size=30 />
+            size={90} />
         </TouchableWithoutFeedback>
       );
     }

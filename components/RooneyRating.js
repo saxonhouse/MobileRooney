@@ -5,6 +5,7 @@ import { Button } from 'react-native-elements';
 import { RooneyForm } from './RooneyForm';
 import { StackNavigator } from 'react-navigation';
 import { UserBar } from './UserBar';
+import styles from '../libs/styles'
 var Uploader = require('../libs/Uploader.js');
 
 
@@ -14,23 +15,9 @@ export class RooneyRatingScreen extends Component {
     this.state = {
       error: '',
       token: {},
-      user: {}
+      user: props.navigation.state.params.user
     }
     this.submit = this.submit.bind(this);
-    this.discard = this.discard.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.props.navigation.state.params.token) {
-      this.setState({
-        token: this.props.navigation.state.params.token,
-      })
-    }
-    if (this.props.navigation.state.params.user) {
-      this.setState({
-        user: this.props.navigation.state.params.user
-      })
-    }
   }
 
   submit() {
@@ -40,7 +27,6 @@ export class RooneyRatingScreen extends Component {
       score: this.props.navigation.state.params.score,
       filename: filename
     }
-    console.warn(data);
     Uploader.upload(this.props.navigation.state.params.filepath, filename, data).then((response) => {
       this.props.navigation.navigate('RooneyBoard', {
         getRooney: true,
@@ -50,17 +36,9 @@ export class RooneyRatingScreen extends Component {
       })
     }).catch((e) => {
       this.setState({error: e.message});
-      console.warn(e);
       return
     });
 
-  }
-
-  discard() {
-    this.props.navigation.navigate('RooneyRecorder', {
-      token: this.state.token,
-      user: this.state.user
-    });
   }
 
   render() {
@@ -68,14 +46,30 @@ export class RooneyRatingScreen extends Component {
     const message1 = 'Oof! Wayne\'s looking pleased...'
     const message2 = 'Pft, Wayne\'s barely heard it...'
     return (
-      <View>
+      <View style={styles.rater}>
         <UserBar user={this.state.user} />
-        <Text>  {params.score > 2.5 ? message1 : message2 } </Text>
-        <Text> {params.score} </Text>
-        <Player url={params.filepath} local={true} />
-        <Text> Submit to the Rooneyboard below! </Text>
-        <Button onPress={this.submit} title={"Submit"} />
-        <Button onPress={this.discard} title={"Discard"} />
+        <View>
+          <Text>  {params.score > 2.5 ? message1 : message2 } </Text>
+          <Text> {params.score} </Text>
+        </View>
+          <Player url={params.filepath} local={true} />
+          <View>
+          <Text> Submit to the Rooneyboard below! </Text>
+          <Button
+            style={{backgroundColor: 'green'}}
+            icon={{name:'ios-football', type:'ionicon'}}
+            onPress={this.submit}
+            title={"Submit"} />
+          <Button
+            style={{backgroundColor: 'red',}}
+            icon={{name:'ios-trash-outline', type:'ionicon'}}
+            onPress={() => this.props.navigation.navigate('RooneyRecorder', {
+                token: this.state.token,
+                user: this.state.user
+              })
+            }
+            title={"Discard"} />
+        </View>
         <Text> {this.state.error} </Text>
       </View>
     )

@@ -22,12 +22,15 @@ const RootStack = StackNavigator({
   },
   {
     initialRouteName: 'Login',
+    headerMode: 'none',
   }
 );
 
 export default class App extends React.Component {
   render() {
-    return <RootStack />;
+    return (
+    <RootStack />
+    );
   }
 }
 
@@ -37,5 +40,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    top: '10%',
   },
 });

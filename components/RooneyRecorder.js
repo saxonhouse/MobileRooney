@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text } from 'react-native';
+import { Button } from 'react-native-elements';
 import { Mic } from './Mic';
 import { UserBar } from './UserBar';
 import { StackNavigator } from 'react-navigation';
+import styles from '../libs/styles';
 import rooneyRater from '../libs/rooneyrater';
 
 export class RooneyRecorderScreen extends Component {
@@ -12,23 +14,9 @@ export class RooneyRecorderScreen extends Component {
       filepath: '',
       score: 0,
       token: {},
-      user: {}
+      user: props.navigation.state.params.user
     }
     this.finished = this.finished.bind(this);
-    this.loadBoard = this.loadBoard.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.props.navigation.state.params.token) {
-      this.setState({
-        token: this.props.navigation.state.params.token,
-      })
-    }
-    if (this.props.navigation.state.params.user) {
-      this.setState({
-        user: this.props.navigation.state.params.user,
-      })
-    }
   }
 
   finished(filepath, volume, time) {
@@ -42,16 +30,16 @@ export class RooneyRecorderScreen extends Component {
     });
   }
 
-  loadBoard() {
-    this.props.navigation.navigate('RooneyBoard', {getRooney: false, token: this.state.token, user: this.state.user});
-  }
-
   render() {
     return (
-      <View>
+      <View style={styles.recorder}>
         <UserBar user={this.state.user} />
         <Mic finished={this.finished} />
-        <Button onPress={this.loadBoard} title={"RooneyBoard"} />
+        <Button
+          icon={{name: 'md-trophy', type:'ionicon'}}
+          onPress={() => this.props.navigation.navigate('RooneyBoard',
+            {getRooney: false, user: this.state.user})}
+          title="RooneyBoard" />
       </View>
 
     )

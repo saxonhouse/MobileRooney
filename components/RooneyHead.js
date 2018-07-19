@@ -26,7 +26,7 @@ export class RooneyHead extends Component {
   render() {
     return (
       <View>
-      <Animated.Image source={{uri: "https://cdn.staticneo.com/w/footballmanager/9/90/5108390.png"}}
+      <Animated.Image source={require('../libs/rooney.png')}
       style={{
         height: 200,
         transform: [{

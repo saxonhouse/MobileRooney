@@ -31,10 +31,8 @@ export class Player extends Component {
         setTimeout(() => {
           Rooney.play((success) => {
             if (success) {
-              console.warn('successfully finished playing')
               Rooney.release();
             } else {
-              console.warn('playback failed due to audio decoding errors')
               Rooney.reset();
             }
           })

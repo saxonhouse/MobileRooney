@@ -16,7 +16,9 @@ export class UserBar extends Component {
       user.name = 'User';
     }
     return(
-      <View>
+      <View style= {{
+        flexDirection: 'row'
+      }}>
         <Avatar
           small
           rounded
